@@ -27,21 +27,6 @@ jQuery(function ($) {
          Scroll
     ====================================== */
 
-
-    $(window).on('scroll', function () {
-        var path = window.location.pathname;
-        var page = path.split("/").pop();
-
-        if(page != "prijzen.html" && page != "voorbedrijven.html"){
-            if ($(this).scrollTop() > 220) { // Set position from top to add class
-                $('header').addClass('header-appear');
-            }
-            else {
-                $('header').removeClass('header-appear');
-            }
-        }
-    });
-
     //scroll to appear
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 500)
