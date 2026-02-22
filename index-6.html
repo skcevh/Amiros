@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Amiros</title>
+    <link rel="icon" href="img/demo-1/favicon.ico" type="image/x-icon">
+
+
+
+    <link href="css/demo-6.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- website frame -->
+    <span class="frame-line top-frame"></span>
+    <span class="frame-line right-frame"></span>
+    <span class="frame-line bottom-frame"></span>
+    <span class="frame-line left-frame"></span>
+    <!-- end website frame -->
+
+
+    <!-- page -->
+    <div class="page">
+        
+        <!-- overlay -->
+        <div class="overlay"></div>
+        <!-- end overlay -->
+        
+        <!-- img  -->
+        <img class="img" src="img/02.jpg" alt="img" />
+        <!-- end img -->
+
+         <div class="countdown-div">
+            <div class="row">
+                    <img src="img/Amiros.png"  height="500" width="auto" />
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <button class="notify-btn cursor-pointer">Ik ben een particulier</button>
+                </div>
+                <div class="col-lg-3">
+                    <button class="cursor-pointer">Ik ben een zakelijke partner</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end page -->
+
+
+
+
+    <!-- jQuery-->
+    <script src="js/jquery.js"></script>
+
+
+    <script>
+
+        var lFollowX = 0,
+            lFollowY = 0,
+            x = 0,
+            y = 0,
+            friction = 1 / 30;
+
+        function animate() {
+            x += (lFollowX - x) * friction;
+            y += (lFollowY - y) * friction;
+
+            translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+            $('.img').css({
+                '-webit-transform': translate,
+                '-moz-transform': translate,
+                'transform': translate
+            });
+
+            window.requestAnimationFrame(animate);
+        }
+
+        $(window).on('mousemove click', function (e) {
+
+            var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+            var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+            lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+            lFollowY = (10 * lMouseY) / 100;
+
+        });
+
+        animate();
+    </script>
+
+
+</body>
+
+</html>
