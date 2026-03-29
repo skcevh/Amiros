@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  },
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve --port=8081",
+    "build": "npx @11ty/eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy-plugin-ejs": "^1.0.0",
+    "ejs": "^5.0.1"
+  }
+}
