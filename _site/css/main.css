@@ -616,7 +616,7 @@ header{
 
 
 .box{
-    min-height:400px;
+    min-height:200px;
     
     background-color: #f5f5f5;
     cursor: pointer;
@@ -639,7 +639,6 @@ header{
 
 .box .content div{
     margin-top:40px;
-    padding: 30px;
 }
 
 .box .content div i{
@@ -722,7 +721,7 @@ section {
 .pricing-grid .pricing-container.primary{
     transform: scale(1.05);
     background: linear-gradient(180deg, #f5f2f2 0%, #e8e2e2 100%);
-
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.50);
 }
 
 .pricing-grid .pricing-container:hover {
@@ -868,4 +867,89 @@ details[open] {
 
 .white{
     color:white;
+}
+
+.gold{
+    color: #FFD700;
+}
+
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  height: 560px;
+  background: #f3f3f3;
+  overflow: hidden;
+  width:100%;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 35px;
+  bottom: 35px;
+  left: 50%;
+  width: 6px;
+  transform: translateX(-50%);
+  background: #b31313;
+  border-radius: 999px;
+}
+
+.timeline-item {
+  position: absolute;
+  top: var(--y);
+  left: 0;
+  width: 100%;
+  min-height: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  background: #b31313;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.timeline-content {
+  position: absolute;
+  top: -10px;
+  width: 34%;
+  color: #111;
+  font-family: Arial, sans-serif;
+  line-height: 1.15;
+}
+
+.timeline-content h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.timeline-content p {
+  margin: 0;
+}
+
+.timeline-item.left .timeline-content {
+  right: calc(50% + 30px);
+  text-align: center;
+}
+
+.timeline-item.right .timeline-content {
+  left: calc(50% + 30px);
+  text-align: left;
+}
+
+.timeline-item.left h3{
+    text-align: right;
+    margin-right:10px;
+}
+
+
+.timeline-item.left .timeline-content p{
+    text-align: right;
+    margin-right:10px;
 }
