@@ -706,7 +706,7 @@ section {
 .pricing-grid .pricing-container{
     min-height: 400px;
     margin: 25px 20px 50px 20px;
-    padding: 50px 20px;
+    padding: 50px 20px 10px 20px;
     cursor: pointer;
 
     background: linear-gradient(180deg, #faf9f9 0%, #f0eded 100%);
@@ -952,4 +952,8 @@ details[open] {
 .timeline-item.left .timeline-content p{
     text-align: right;
     margin-right:10px;
+}
+
+.green{
+    color: #28a745!important;
 }

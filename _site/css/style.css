@@ -2787,3 +2787,44 @@ button.bg-color-black:hover {
 .mx-auto {
     margin-left: auto !important
 }
+
+.iconbulet .icon{
+    font-size: 32px;
+    color:var(--primary-color);
+}
+
+.iconbulet .text{
+    font-size: 25px;
+    margin-left:25px;
+    margin-top:5px;
+}
+
+
+.info-box{
+    background-color: #e4e7ec;
+    border: 1px solid #eeee;
+    height:200px;
+    padding:10px;
+}
+
+.info-box .icon{
+    font-size: 32px;
+    color:var(--primary-color);
+    justify-content: center;
+    margin-top:20px;
+}
+
+.info-box .title{
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.info-box .text{
+    justify-content: center;
+    text-align: center;
+    margin-top:30px;
+    margin-left: 5px;
+    margin-right:5px;
+    margin-bottom: 20px;
+}
