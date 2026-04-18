@@ -1,194 +1,198 @@
-$(document).ready(function () {
-    setTimeout(function () {
-        $(".nav-trigger").click();
-    }, 300);
+// $(document).ready(function () {
+//     setTimeout(function () {
+//         $(".nav-trigger").click();
+//     }, 300);
 
-    $(".back-to-top").click(function () {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
+//     $(".back-to-top").click(function () {
+//         window.scrollTo({
+//             top: 0,
+//             behavior: "smooth"
+//         });
+//     });
 
-    $('#clients-slider').on('click', function () {
-        $(this).data('sliderPro').nextSlide();
-    });
+//     $('#clients-slider').on('click', function () {
+//         $(this).data('sliderPro').nextSlide();
+//     });
 
-    document.querySelectorAll('.has-dropdown').forEach(item => {
-        const dropdown = item.querySelector('.dropdown');
+//     document.querySelectorAll('.has-dropdown').forEach(item => {
+//         const dropdown = item.querySelector('.dropdown');
 
-        item.addEventListener('mouseenter', () => {
-            // reset eerst
-            dropdown.style.left = '';
-            dropdown.style.right = '';
+//         item.addEventListener('mouseenter', () => {
+//             // reset eerst
+//             dropdown.style.left = '';
+//             dropdown.style.right = '';
 
-            const rect = dropdown.getBoundingClientRect();
-            const viewportWidth = window.innerWidth;
+//             const rect = dropdown.getBoundingClientRect();
+//             const viewportWidth = window.innerWidth;
 
-            // overflow rechts
-            if (rect.right > viewportWidth - 10) {
-                const overflowRight = rect.right - viewportWidth + 10;
+//             // overflow rechts
+//             if (rect.right > viewportWidth - 10) {
+//                 const overflowRight = rect.right - viewportWidth + 10;
 
-                dropdown.style.left = `calc(0px - ${overflowRight}px)`;
-            }
+//                 dropdown.style.left = `calc(0px - ${overflowRight}px)`;
+//             }
 
-            // overflow links (edge case)
-            if (rect.left < 10) {
-                const overflowLeft = 10 - rect.left;
+//             // overflow links (edge case)
+//             if (rect.left < 10) {
+//                 const overflowLeft = 10 - rect.left;
 
-                dropdown.style.left = `${overflowLeft}px`;
-            }
-        });
-    });
+//                 dropdown.style.left = `${overflowLeft}px`;
+//             }
+//         });
+//     });
 
-    $(".news-item").click(function () {
-        $(".news-item").removeAttr("open");
+//     $(".news-item").click(function () {
+//         $(".news-item").removeAttr("open");
 
-        var el = $(this);
+//         var el = $(this);
 
-        var parent;
-        if (el.hasClass(".news-item")) {
-            parent = el;
-        } else {
-            $(this).closest(".news-item");;
-        }
+//         var parent;
+//         if (el.hasClass(".news-item")) {
+//             parent = el;
+//         } else {
+//             $(this).closest(".news-item");;
+//         }
 
-        parent.attr("open", "true");
-    });
+//         parent.attr("open", "true");
+//     });
 
-});
+// });
 
-document.addEventListener("DOMContentLoaded", function () {
-            const searchInput = document.getElementById("faqSearch");
-            const clearButton = document.getElementById("faqClear");
-            const faqItems = Array.from(document.querySelectorAll(".faq-item"));
-            const sections = Array.from(document.querySelectorAll(".faq-section"));
-            const noResults = document.getElementById("faqNoResults");
-            const countText = document.getElementById("faqCountText");
+// document.addEventListener("DOMContentLoaded", function () {
+//             const searchInput = document.getElementById("faqSearch");
+//             const clearButton = document.getElementById("faqClear");
+//             const faqItems = Array.from(document.querySelectorAll(".faq-item"));
+//             const sections = Array.from(document.querySelectorAll(".faq-section"));
+//             const noResults = document.getElementById("faqNoResults");
+//             const countText = document.getElementById("faqCountText");
 
-            function normalize(text) {
-                return text
-                    .toLowerCase()
-                    .normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "");
-            }
+//             if(searchInput == null){
+//                 return;
+//             }
 
-            function escapeRegExp(string) {
-                return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-            }
+//             function normalize(text) {
+//                 return text
+//                     .toLowerCase()
+//                     .normalize("NFD")
+//                     .replace(/[\u0300-\u036f]/g, "");
+//             }
 
-            function removeHighlights(container) {
-                container.querySelectorAll("mark").forEach(mark => {
-                    const textNode = document.createTextNode(mark.textContent);
-                    mark.replaceWith(textNode);
-                });
-                container.normalize();
-            }
+//             function escapeRegExp(string) {
+//                 return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+//             }
 
-            function highlightText(container, searchTerm) {
-                if (!searchTerm || searchTerm.length < 2) return;
+//             function removeHighlights(container) {
+//                 container.querySelectorAll("mark").forEach(mark => {
+//                     const textNode = document.createTextNode(mark.textContent);
+//                     mark.replaceWith(textNode);
+//                 });
+//                 container.normalize();
+//             }
 
-                const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
-                const textNodes = [];
+//             function highlightText(container, searchTerm) {
+//                 if (!searchTerm || searchTerm.length < 2) return;
 
-                while (walker.nextNode()) {
-                    const node = walker.currentNode;
-                    if (node.nodeValue.trim().length > 0) {
-                        textNodes.push(node);
-                    }
-                }
+//                 const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+//                 const textNodes = [];
 
-                textNodes.forEach(node => {
-                    const originalText = node.nodeValue;
-                    const normalizedText = normalize(originalText);
-                    const normalizedSearch = normalize(searchTerm);
+//                 while (walker.nextNode()) {
+//                     const node = walker.currentNode;
+//                     if (node.nodeValue.trim().length > 0) {
+//                         textNodes.push(node);
+//                     }
+//                 }
 
-                    const index = normalizedText.indexOf(normalizedSearch);
-                    if (index === -1) return;
+//                 textNodes.forEach(node => {
+//                     const originalText = node.nodeValue;
+//                     const normalizedText = normalize(originalText);
+//                     const normalizedSearch = normalize(searchTerm);
 
-                    const range = document.createRange();
-                    const start = index;
-                    const end = index + searchTerm.length;
+//                     const index = normalizedText.indexOf(normalizedSearch);
+//                     if (index === -1) return;
 
-                    try {
-                        range.setStart(node, start);
-                        range.setEnd(node, Math.min(end, originalText.length));
+//                     const range = document.createRange();
+//                     const start = index;
+//                     const end = index + searchTerm.length;
 
-                        const mark = document.createElement("mark");
-                        range.surroundContents(mark);
-                    } catch (e) {
-                        // niets doen
-                    }
-                });
-            }
+//                     try {
+//                         range.setStart(node, start);
+//                         range.setEnd(node, Math.min(end, originalText.length));
 
-            function updateCount(visibleCount) {
-                if (visibleCount === 1) {
-                    countText.innerHTML = "<strong>1</strong> vraag gevonden";
-                } else {
-                    countText.innerHTML = `<strong>${visibleCount}</strong> vragen gevonden`;
-                }
-            }
+//                         const mark = document.createElement("mark");
+//                         range.surroundContents(mark);
+//                     } catch (e) {
+//                         // niets doen
+//                     }
+//                 });
+//             }
 
-            function filterFaq() {
-                console.log('here');
-                const query = searchInput.value.trim();
-                const normalizedQuery = normalize(query);
-                let visibleCount = 0;
+//             function updateCount(visibleCount) {
+//                 if (visibleCount === 1) {
+//                     countText.innerHTML = "<strong>1</strong> vraag gevonden";
+//                 } else {
+//                     countText.innerHTML = `<strong>${visibleCount}</strong> vragen gevonden`;
+//                 }
+//             }
 
-                faqItems.forEach(item => {
-                    const answer = item.querySelector(".faq-answer");
-                    const button = item.querySelector(".faq-question-btn");
-                    const searchableText = normalize(item.innerText);
+//             function filterFaq() {
+//                 console.log('here');
+//                 const query = searchInput.value.trim();
+//                 const normalizedQuery = normalize(query);
+//                 let visibleCount = 0;
 
-                    removeHighlights(item);
+//                 faqItems.forEach(item => {
+//                     const answer = item.querySelector(".faq-answer");
+//                     const button = item.querySelector(".faq-question-btn");
+//                     const searchableText = normalize(item.innerText);
 
-                    const isMatch = normalizedQuery === "" || searchableText.includes(normalizedQuery);
+//                     removeHighlights(item);
 
-                    if (isMatch) {
-                        item.style.display = "";
-                        visibleCount++;
+//                     const isMatch = normalizedQuery === "" || searchableText.includes(normalizedQuery);
 
-                        if (normalizedQuery !== "") {
-                            item.classList.add("open");
-                            button.setAttribute("aria-expanded", "true");
-                            highlightText(item, query);
-                        }
-                    } else {
-                        item.style.display = "none";
-                        item.classList.remove("open");
-                        button.setAttribute("aria-expanded", "false");
-                    }
-                });
+//                     if (isMatch) {
+//                         item.style.display = "";
+//                         visibleCount++;
 
-                sections.forEach(section => {
-                    const visibleItems = Array.from(section.querySelectorAll(".faq-item"))
-                        .filter(item => item.style.display !== "none");
+//                         if (normalizedQuery !== "") {
+//                             item.classList.add("open");
+//                             button.setAttribute("aria-expanded", "true");
+//                             highlightText(item, query);
+//                         }
+//                     } else {
+//                         item.style.display = "none";
+//                         item.classList.remove("open");
+//                         button.setAttribute("aria-expanded", "false");
+//                     }
+//                 });
 
-                    section.style.display = visibleItems.length > 0 ? "" : "none";
-                });
+//                 sections.forEach(section => {
+//                     const visibleItems = Array.from(section.querySelectorAll(".faq-item"))
+//                         .filter(item => item.style.display !== "none");
 
-                noResults.style.display = visibleCount === 0 ? "block" : "none";
-                updateCount(visibleCount);
-            }
+//                     section.style.display = visibleItems.length > 0 ? "" : "none";
+//                 });
 
-            document.querySelectorAll(".faq-question-btn").forEach(button => {
-                button.addEventListener("click", function () {
-                    const item = this.closest(".faq-item");
-                    const isOpen = item.classList.contains("open");
+//                 noResults.style.display = visibleCount === 0 ? "block" : "none";
+//                 updateCount(visibleCount);
+//             }
 
-                    item.classList.toggle("open", !isOpen);
-                    this.setAttribute("aria-expanded", String(!isOpen));
-                });
-            });
+//             document.querySelectorAll(".faq-question-btn").forEach(button => {
+//                 button.addEventListener("click", function () {
+//                     const item = this.closest(".faq-item");
+//                     const isOpen = item.classList.contains("open");
 
-            searchInput.addEventListener("input", filterFaq);
+//                     item.classList.toggle("open", !isOpen);
+//                     this.setAttribute("aria-expanded", String(!isOpen));
+//                 });
+//             });
 
-            clearButton.addEventListener("click", function () {
-                searchInput.value = "";
-                filterFaq();
-                searchInput.focus();
-            });
+//             searchInput.addEventListener("input", filterFaq);
 
-            updateCount(faqItems.length);
-        });
+//             clearButton.addEventListener("click", function () {
+//                 searchInput.value = "";
+//                 filterFaq();
+//                 searchInput.focus();
+//             });
+
+//             updateCount(faqItems.length);
+//         });
