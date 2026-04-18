@@ -1000,3 +1000,42 @@ section.bg-red{
         box-shadow: 0 20px 40px -20px rgba(0,0,0,0.25);
 
 }
+
+
+.faq-question{
+    padding-top:25px;
+}
+
+.faq-search-wrapper {
+    margin: 0 0 30px;
+}
+
+.faq-search {
+    width: 100%;
+    max-width: 700px;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-search:focus {
+    border-color: #b31313;
+    box-shadow: 0 0 0 4px rgba(179, 19, 19, 0.08);
+}
+
+.faq-no-results {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.faq-section-title{
+    color: var(--primary-color)
+}
+
+.faq-section{
+    padding: 25px 0 0px 0;
+}

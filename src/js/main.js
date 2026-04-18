@@ -41,18 +41,154 @@ $(document).ready(function () {
         });
     });
 
-    $(".news-item").click(function(){
+    $(".news-item").click(function () {
         $(".news-item").removeAttr("open");
 
         var el = $(this);
 
         var parent;
-        if(el.hasClass(".news-item")){
+        if (el.hasClass(".news-item")) {
             parent = el;
-        }else{
+        } else {
             $(this).closest(".news-item");;
         }
 
         parent.attr("open", "true");
     });
+
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("faqSearch");
+            const clearButton = document.getElementById("faqClear");
+            const faqItems = Array.from(document.querySelectorAll(".faq-item"));
+            const sections = Array.from(document.querySelectorAll(".faq-section"));
+            const noResults = document.getElementById("faqNoResults");
+            const countText = document.getElementById("faqCountText");
+
+            function normalize(text) {
+                return text
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "");
+            }
+
+            function escapeRegExp(string) {
+                return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            }
+
+            function removeHighlights(container) {
+                container.querySelectorAll("mark").forEach(mark => {
+                    const textNode = document.createTextNode(mark.textContent);
+                    mark.replaceWith(textNode);
+                });
+                container.normalize();
+            }
+
+            function highlightText(container, searchTerm) {
+                if (!searchTerm || searchTerm.length < 2) return;
+
+                const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+                const textNodes = [];
+
+                while (walker.nextNode()) {
+                    const node = walker.currentNode;
+                    if (node.nodeValue.trim().length > 0) {
+                        textNodes.push(node);
+                    }
+                }
+
+                textNodes.forEach(node => {
+                    const originalText = node.nodeValue;
+                    const normalizedText = normalize(originalText);
+                    const normalizedSearch = normalize(searchTerm);
+
+                    const index = normalizedText.indexOf(normalizedSearch);
+                    if (index === -1) return;
+
+                    const range = document.createRange();
+                    const start = index;
+                    const end = index + searchTerm.length;
+
+                    try {
+                        range.setStart(node, start);
+                        range.setEnd(node, Math.min(end, originalText.length));
+
+                        const mark = document.createElement("mark");
+                        range.surroundContents(mark);
+                    } catch (e) {
+                        // niets doen
+                    }
+                });
+            }
+
+            function updateCount(visibleCount) {
+                if (visibleCount === 1) {
+                    countText.innerHTML = "<strong>1</strong> vraag gevonden";
+                } else {
+                    countText.innerHTML = `<strong>${visibleCount}</strong> vragen gevonden`;
+                }
+            }
+
+            function filterFaq() {
+                console.log('here');
+                const query = searchInput.value.trim();
+                const normalizedQuery = normalize(query);
+                let visibleCount = 0;
+
+                faqItems.forEach(item => {
+                    const answer = item.querySelector(".faq-answer");
+                    const button = item.querySelector(".faq-question-btn");
+                    const searchableText = normalize(item.innerText);
+
+                    removeHighlights(item);
+
+                    const isMatch = normalizedQuery === "" || searchableText.includes(normalizedQuery);
+
+                    if (isMatch) {
+                        item.style.display = "";
+                        visibleCount++;
+
+                        if (normalizedQuery !== "") {
+                            item.classList.add("open");
+                            button.setAttribute("aria-expanded", "true");
+                            highlightText(item, query);
+                        }
+                    } else {
+                        item.style.display = "none";
+                        item.classList.remove("open");
+                        button.setAttribute("aria-expanded", "false");
+                    }
+                });
+
+                sections.forEach(section => {
+                    const visibleItems = Array.from(section.querySelectorAll(".faq-item"))
+                        .filter(item => item.style.display !== "none");
+
+                    section.style.display = visibleItems.length > 0 ? "" : "none";
+                });
+
+                noResults.style.display = visibleCount === 0 ? "block" : "none";
+                updateCount(visibleCount);
+            }
+
+            document.querySelectorAll(".faq-question-btn").forEach(button => {
+                button.addEventListener("click", function () {
+                    const item = this.closest(".faq-item");
+                    const isOpen = item.classList.contains("open");
+
+                    item.classList.toggle("open", !isOpen);
+                    this.setAttribute("aria-expanded", String(!isOpen));
+                });
+            });
+
+            searchInput.addEventListener("input", filterFaq);
+
+            clearButton.addEventListener("click", function () {
+                searchInput.value = "";
+                filterFaq();
+                searchInput.focus();
+            });
+
+            updateCount(faqItems.length);
+        });
