@@ -488,7 +488,7 @@
                                 <div id="result"></div>
                                 <div class="mat-div">
                                     <label for="first-name" class="mat-label">Naam</label>
-                                    <input type="text" name="name" class="mat-input" id="first-name">
+                                    <input type="text" name="name" class="mat-input" id="name">
                                 </div>
 
                                 <div class="mat-div">
@@ -497,11 +497,26 @@
                                 </div>
 
                                 <div class="mat-div">
+                                    <label for="phone" class="mat-label">Telefoon</label>
+                                    <input type="tel" name="phone" class="mat-input" id="phone">
+                                </div>
+                                
+                                <div class="mat-div">
+                                    <label for="subject" class="mat-label">Onderwerp</label>
+                                    <input type="text" name="subject" class="mat-input" id="subject">
+                                </div>
+
+                                <div class="mat-div">
                                     <label for="message" class="mat-label">Bericht</label>
                                     <textarea name="message" id="message" class="mat-input"></textarea>
                                 </div>
-                                <button id="submit_btn" class="default-btn"> Verstuur <i
+
+                                <button id="sendmail" class="default-btn"> Verstuur <i
                                         class="ion-ios-arrow-thin-right"></i></button>
+                                        
+                                        <div id="result">
+
+                                        </div>
                             </div>
                         </div>
                     </div>
@@ -577,6 +592,10 @@
 <script src="js/custom.js"></script>
 
 <script src="js/main.js"></script>
+
+  <script crossorigin="anonymous" defer=""
+    integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+    referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
 </body>
 
 </html>
