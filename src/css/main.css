@@ -4,6 +4,10 @@
     --spacing: 16px;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 
 #preloader {
     background-color: #333;
@@ -489,13 +493,13 @@
 
 .banner{
     position: relative;
-    height: 500px;
+    height: 600px;
     width: 100%;
     overflow: hidden;
     box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.3);
 
-    background-image: url('../img/Banner.jpg');
-    background-size: stretch;
+    background-image: url('../img/Banner.png');
+    background-size: cover;
     /* background-position: contain; */
     background-repeat: no-repeat;
 }
@@ -507,7 +511,7 @@
 }
 
 .banner h1{
-    margin-top:220px;
+    margin-top:350px;
      color: var(--primary-color);
     font-weight: 1500;
     font-weight: bold;
@@ -614,6 +618,11 @@ header{
     color:white;
 }
 
+.bg-gold{
+    background-color: #cba94d;
+    color:white;
+}
+
 
 .box{
     min-height:200px;
@@ -706,13 +715,11 @@ section {
 .pricing-grid .pricing-container{
     min-height: 400px;
     margin: 25px 20px 50px 20px;
-    padding: 50px 20px 10px 20px;
     cursor: pointer;
-
+    padding:0px !important;
     background: linear-gradient(180deg, #faf9f9 0%, #f0eded 100%);
-    border: 1px solid rgba(0,0,0,0.06);
-    box-shadow:
-        0 8px 20px -10px rgba(0,0,0,0.08);
+    border: 1px solid var(--primary-color);
+  
     transition: transform 0.25s ease, box-shadow 0.25s ease;
         color: #2b2b2b;
 
@@ -721,7 +728,7 @@ section {
 .pricing-grid .pricing-container.primary{
     transform: scale(1.05);
     background: linear-gradient(180deg, #f5f2f2 0%, #e8e2e2 100%);
-    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.50);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.90);
 }
 
 .pricing-grid .pricing-container:hover {
@@ -917,7 +924,7 @@ details[open] {
 .timeline-content {
   position: absolute;
   top: -10px;
-  width: 34%;
+  width: 40%;
   color: #111;
   font-family: Arial, sans-serif;
   line-height: 1.15;
@@ -987,6 +994,13 @@ section.bg-red{
     color:white;
 }
 
+.gold-btn {
+    background-color: #cba94d;
+     color:white;
+    padding:15px;
+    transition: transform 0.2s ease;
+}
+
 .text-box {
     padding:25px;
     border: 1px solid var(--primary-color);
@@ -1039,3 +1053,44 @@ section.bg-red{
 .faq-section{
     padding: 25px 0 0px 0;
 }
+
+section:first-child{
+    margin-top: 50px !important;
+}
+
+
+
+
+.pricing-card {
+    position: relative;
+    background: #f8f7f4;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border: 1px solid #e6dfcf;
+}
+
+.pricing-card__top {
+    padding-top:25px;
+    padding-bottom: 25px;
+    border-bottom-left-radius: 50% 10px;
+    border-bottom-right-radius: 50% 10px;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #e3e1e2 0%, #dedcde 55%, #d8d6d9 100%);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.pricing-card__top.primary {
+background: linear-gradient(
+    90deg,
+    #cccacd 0%,
+    #c6c4c7 55%,
+    #c0bec1 100%
+);  
+}
+
+.pricing-card__body {
+   padding-bottom: 20px;
+   margin-left: 50px;
+   margin-right: 50px;
+}
+

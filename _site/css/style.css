@@ -578,7 +578,7 @@ header {
 .nav-trigger {
     position: fixed;
     z-index: 4;
-    top: 40px;
+    top: 75px !important;
     right: 40px;
     height: 44px;
     width: 44px;
@@ -642,20 +642,11 @@ header {
     background: #fff;
 }
 
-.nav-open .nav-trigger span::before {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-.nav-open .nav-trigger span::after {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
 
 .nav-container {
     position: fixed;
-    z-index: 100;
-    top: 33px;
+    z-index: 999999;
+    top: 120px !important;
     right: 33px;
     height: 57px;
     width: auto;
@@ -871,7 +862,7 @@ h2.sp-layer {
 }
 
 .icon-box {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     padding-right: 10px;
 }
 
