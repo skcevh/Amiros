@@ -2801,7 +2801,7 @@ button.bg-color-black:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width:235px;
+    width:200px;
 }
 
 .info-box .icon{
@@ -2812,7 +2812,7 @@ button.bg-color-black:hover {
 }
 
 .info-box .boxtitle{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     justify-content: center;
     margin-top:10px;
@@ -2825,5 +2825,4 @@ button.bg-color-black:hover {
     margin-left: 5px;
     margin-right:5px;
     margin-bottom: 20px;
-    font-size:18px;
 }
