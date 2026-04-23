@@ -641,12 +641,11 @@ header{
 }
 
 .box .content{
-    min-height: 375px;
     justify-content: center;
 }
 
 .box .content div{
-    margin-top:40px;
+    margin-top:25px;
 }
 
 .box .content div i{
