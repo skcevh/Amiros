@@ -2793,8 +2793,15 @@ button.bg-color-black:hover {
 .info-box{
     background-color: #e4e7ec;
     border: 1px solid #eeee;
-    height:200px;
     padding:10px;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width:200px;
 }
 
 .info-box .icon{
@@ -2804,16 +2811,17 @@ button.bg-color-black:hover {
     margin-top:20px;
 }
 
-.info-box .title{
+.info-box .boxtitle{
     font-size: 18px;
     font-weight: bold;
     justify-content: center;
+    margin-top:10px;
 }
 
 .info-box .text{
     justify-content: center;
     text-align: center;
-    margin-top:30px;
+    margin-top:10px;
     margin-left: 5px;
     margin-right:5px;
     margin-bottom: 20px;
