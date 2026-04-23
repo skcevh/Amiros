@@ -1,7 +1,12 @@
 let navOpen = false;
 
 
+
 $(document).ready(function () {
+    function isMobile() {
+        return window.innerWidth <= 767;
+    }
+
     
     setTimeout(function () {
         document.querySelector('.nav-trigger')?.click();
@@ -13,11 +18,15 @@ $(document).ready(function () {
     $(window).on('scroll', function () {
         const scrollTop = $(this).scrollTop();
 
-        if (scrollTop > 500 && navOpen) {
+        var isMobile = isMobile();
+
+        console.log('mobile', isMobile);
+
+        if (!isMobile && scrollTop > 500 && navOpen) {
             document.querySelector('.nav-trigger')?.click();
 
             navOpen = false; 
-        }else if(scrollTop < 500 && !navOpen){
+        }else if(!isMobile && scrollTop < 500 && !navOpen){
             document.querySelector('.nav-trigger')?.click();
             
             navOpen = true;

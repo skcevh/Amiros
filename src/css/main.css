@@ -500,8 +500,7 @@ html, body {
 
     background-image: url('../img/Banner.png');
     background-size: cover;
-    /* background-position: contain; */
-    background-repeat: no-repeat;
+    background-position: center 20%;
 }
 
 .banner::after {
@@ -511,13 +510,13 @@ html, body {
 }
 
 .banner h1{
-    margin-top:350px;
+    margin-top:300px;
      color: var(--primary-color);
     font-weight: 1500;
     font-weight: bold;
     letter-spacing: 3px;;
     font-size: 30px;
-        text-shadow: 0 3px 12px rgba(255,255,225,0.6);
+    text-shadow: 0 3px 12px rgba(255,255,225,0.6);
 }
 
 .banner p, .banner h2{
@@ -744,9 +743,23 @@ section {
     text-decoration: underline;
 }
 
-.default-btn.big, span.big{
+.big{
     font-size: 20px;
 }
+
+
+.bigger {
+    font-size: 18px;
+}
+
+.smaller{
+    font-size: 14px;
+}
+
+.italic{
+    font-style: italic;
+}
+
 
 .numbering{
     color: var(--primary-color);
