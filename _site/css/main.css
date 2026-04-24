@@ -1106,3 +1106,26 @@ background: linear-gradient(
    margin-right: 50px;
 }
 
+.note-box{
+    background-color: white;
+    border: 1px solid #e6dfcf;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;;
+}
+
+.note-box .icon{
+    font-size:44px;
+    justify-content: center;
+    vertical-align: middle;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.note-box .boxtitle{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primary-color);
+}

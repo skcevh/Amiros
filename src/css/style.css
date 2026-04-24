@@ -2791,9 +2791,12 @@ button.bg-color-black:hover {
 
 
 .info-box{
-    background-color: #e4e7ec;
+    background-color: #fff;
     border: 1px solid #eeee;
+    box-shadow:  0 5px 20px -5px rgba(0, 0, 0, 0.2);
     padding:10px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 
     height: 100%;
     max-height: 250px;
@@ -2804,6 +2807,11 @@ button.bg-color-black:hover {
     text-align: center;
     width:200px;
 }
+
+.info-box:hover{
+    transform: scale(1.05); /* +5% */
+}
+
 
 .info-box .icon{
     font-size: 32px;
