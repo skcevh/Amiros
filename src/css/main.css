@@ -1129,3 +1129,172 @@ background: linear-gradient(
     font-weight: bold;
     color: var(--primary-color);
 }
+
+
+
+
+
+
+
+
+.speech-bubble {
+    position: relative;
+    display: inline-block;
+    padding: 20px 30px;
+    border: 3px solid var(--primary-color);
+    border-radius: 40px;
+    background: #fff;
+    font-size:26px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.speech-bubble:hover {
+    transform: scale(1.05); /* +5% */
+}
+
+/* pijltje */
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 40px;
+
+    width: 0;
+    height: 0;
+
+    border: 15px solid transparent;
+    border-top-color: #8b0000;
+}
+
+
+
+
+.why-wrapper {
+    position: relative;
+    padding: 40px 20px 90px;
+    text-align: center;
+    justify-content: center;
+    width:70vw;
+    margin-top:50px;
+}
+
+.why-box {
+    position: relative;
+    z-index: 2;
+    max-width: 530px;
+    margin: 0 auto;
+    padding: 26px 45px 30px;
+    background: white;
+    border: 3px dashed #a51414;
+    border-radius: 42px;
+
+}
+
+.why-box h2 {
+    margin: 0 0 20px;
+    color: #a51414;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.why-box p {
+    margin: 0 0 18px;
+    font-size: 18px;
+    line-height: 1.15;
+    letter-spacing: 1.5px;
+}
+
+.why-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* container voor de lijntjes */
+.why-lines {
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    bottom: 28px;
+    height: 82px;
+    border-top: 3px solid #a51414;
+    border-left: 3px solid #a51414;
+    border-right: 3px solid #a51414;
+    border-radius: 18px 18px 0 0;
+}
+
+/* middelste verticale lijntjes */
+.why-lines span {
+    position: absolute;
+    bottom: -28px;
+    width: 2px;
+    height: 70px;
+    background: #a51414;
+}
+
+.why-lines span:nth-child(1) {
+    left: 0;
+}
+
+.why-lines span:nth-child(2) {
+    left: 41%;
+}
+
+.why-lines span:nth-child(3) {
+    right: 25%;
+}
+
+.why-lines span:nth-child(4) {
+    right: 0;
+}
+
+/* pijltjes */
+.why-lines span::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 10px;
+    height: 10px;
+    border-right: 3px solid #a51414;
+    border-bottom: 3px solid #a51414;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.why-lines span:nth-child(1) {
+    left: -2px; /* was 0 */
+}
+
+.why-lines span:nth-child(4) {
+    right: -2px; /* was 0 */
+}
+
+.why-text{
+    position: relative;
+    width: 100%;
+}
+
+.why-text .container{
+    position: absolute;
+    top:100px;
+    width:200px;
+}
+
+.why-text .container:nth-child(1){
+    left:-30px;
+}
+
+.why-text .container:nth-child(2){
+    left: calc(41% - 85px);
+}
+
+.why-text .container:nth-child(3){
+    right: calc(25% - 70px);
+}
+
+.why-text .container:nth-child(4){
+    right: -30px;
+}
