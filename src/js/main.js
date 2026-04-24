@@ -9,13 +9,19 @@ $(document).ready(function () {
 
     
     setTimeout(function () {
-        document.querySelector('.nav-trigger')?.click();
+        if(!isMobile()){
+            document.querySelector('.nav-trigger')?.click();
 
-        navOpen = true;
+            navOpen = true;
+        }
     }, 300);
 
     
     $(window).on('scroll', function () {
+        function isMobile() {
+            return window.innerWidth <= 767;
+        }
+
         const scrollTop = $(this).scrollTop();
 
         var isMobile = isMobile();
