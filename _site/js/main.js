@@ -330,3 +330,28 @@ async function sendEmail(to, from, subject, text, isHtml) {
     return false;
   }
 }
+
+
+
+(function() {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('cookie-accept');
+    const declineBtn = document.getElementById('cookie-decline');
+    const consentKey = 'amiros_cookie_consent';
+
+    // Toon banner alleen als nog geen keuze is gemaakt
+    if (!localStorage.getItem(consentKey)) {
+      banner.style.display = 'block';
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem(consentKey, 'accepted');
+      banner.style.display = 'none';
+      // hier kun je extra scripts activeren (zoals analytics)
+    });
+
+    declineBtn.addEventListener('click', () => {
+      localStorage.setItem(consentKey, 'declined');
+      banner.style.display = 'none';
+    });
+  })();

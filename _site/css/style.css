@@ -2785,7 +2785,7 @@ button.bg-color-black:hover {
 
 .iconbulet .text{
     font-size: 25px;
-    margin-left:25px;
+    margin-left:10px;
     margin-top:5px;
 }
 
@@ -2834,4 +2834,5 @@ button.bg-color-black:hover {
     margin-left: 5px;
     margin-right:5px;
     margin-bottom: 20px;
+    line-height: 1.2;
 }
