@@ -574,15 +574,65 @@ header{
     }
 
     .banner {
-        height: 400px;
+        height: 500px;
     }
 
     .banner h1{
-        margin-top: 10px;
+        margin-top: 200px;
+        font-size:26px;
     }
 
     .banner a{
         display: none;
+    }
+
+    img{
+        max-width: 90vw;;
+    }
+
+    section{
+        padding:0px !important;
+    }
+
+    .content{
+        padding: 0px !important;
+    }
+
+    .mobilepadding{
+        padding: 0px 30px !important;
+    }
+
+    .nomobilemargin{
+        margin: 0px !important;
+    }
+
+    .mobilew100{
+        width: 100% !important;
+    }
+
+    .mobile80vw{
+        width: 80vw !important;
+    }
+    
+    .mobiletop{
+        margin-top: 25px !important;
+    }
+
+    #footer{
+        height: 180px;
+        padding-top:20px !important;
+    }
+
+    .default-btn{
+        padding: 0px !important;
+    }
+
+    .iconbulet .text{
+        font-size: 18px !important;
+    }
+
+    .mobilejustifycenter{
+        justify-content: center !important;
     }
 }
 
@@ -636,9 +686,6 @@ header{
     padding-left: 35px;
 }
 
-.box:last-of-type{
-    padding-right: 35px;
-}
 
 .box .content{
     justify-content: center;
@@ -1151,6 +1198,7 @@ background: linear-gradient(
     align-items: center;
     transition: transform 0.2s ease;
     cursor: pointer;
+    line-height: 1.4;
 }
 
 .speech-bubble:hover {
@@ -1241,11 +1289,11 @@ background: linear-gradient(
 }
 
 .why-lines span:nth-child(2) {
-    left: 41%;
+    left: 30%;
 }
 
 .why-lines span:nth-child(3) {
-    right: 25%;
+    right: 30%;
 }
 
 .why-lines span:nth-child(4) {
@@ -1281,23 +1329,23 @@ background: linear-gradient(
 .why-text .container{
     position: absolute;
     top:100px;
-    width:200px;
+    width:300px;
 }
 
 .why-text .container:nth-child(1){
-    left:-30px;
+    left:-75px;
 }
 
 .why-text .container:nth-child(2){
-    left: calc(41% - 85px);
+    left: calc(30% - 125px);
 }
 
 .why-text .container:nth-child(3){
-    right: calc(25% - 70px);
+    right: calc(30% - 120px);
 }
 
 .why-text .container:nth-child(4){
-    right: -30px;
+    right: -75px;
 }
 
 #topbanner{
