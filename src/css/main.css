@@ -574,7 +574,7 @@ header{
     }
 
     .banner {
-        height: 500px;
+        height: 540px;
     }
 
     .banner h1{
@@ -633,6 +633,23 @@ header{
 
     .mobilejustifycenter{
         justify-content: center !important;
+    }
+
+    .mobiletextcenter{
+        text-align: center !important;
+    }
+
+    ul.nav{
+        display: block !important;
+    }
+
+    .nav-container{
+        width:130px;
+        height:auto;
+    }
+
+    .info-box{
+        margin-left: 0px !important;
     }
 }
 
