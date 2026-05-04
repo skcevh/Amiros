@@ -2811,9 +2811,23 @@ button.bg-color-black:hover {
         width:200px;
 }
 
+
+.col-lg-3 .info-box{
+        width:200px;
+}
+
 .col-lg-4 .info-box{
-        width:350px;
-        height:350px;
+        height:350px !important;
+        min-height:350px !important;
+}
+
+.col-lg-4 .info-box .boxtitle{
+        font-size:26px;
+}
+
+.col-lg-4 .info-box .text{
+    margin-top: 25px;
+        font-size:18px;
 }
 
 
