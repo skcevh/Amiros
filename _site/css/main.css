@@ -528,6 +528,10 @@ html, body {
     
 }
 
+.banner .subtitle{
+    font-size: 18px !important;
+}
+
 .banner .text-body{
       position: relative;
     z-index: 2;
@@ -1560,7 +1564,7 @@ background: linear-gradient(
     border-radius: 25px;
     color:white;
     padding:10px 50px ;
-    font-size:28px;
+    font-size:26px;
 }
 
 
