@@ -266,6 +266,9 @@ function prepareMail(parent){
     var to = "ceschool@gmail.com";
         var from = parent.find("#email").val();
         var phoneNumber = parent.find("#phone").val();
+        var adres = parent.find("#adres").val();
+        var postalcode = parent.find("#postalcode").val();
+        var city = parent.find("#city").val();
         var subject = parent.find("#subject").val();
         var text = parent.find("#message").val();
         var name = parent.find("#name").val();
@@ -274,6 +277,9 @@ function prepareMail(parent){
             "Subject: " + subject + "<br />" +
             "Phone: " + phoneNumber + "<br />" +
             "Name: " + name + "<br />" +
+            "Address: " + adres + "<br />" +
+            "Postal Code: " + postalcode + "<br />" +
+            "City: " + city + "<br />" +
             "Text: " + text;
 
         sendEmail(to, from, subject, message, true).then((sentMail) => {
