@@ -3,6 +3,7 @@ const ejsPlugin = require("@11ty/eleventy-plugin-ejs");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(ejsPlugin);
 
+  eleventyConfig.addPassthroughCopy("src/Templates");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/img");

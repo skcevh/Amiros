@@ -1,0 +1,290 @@
+{
+  "source": "https://www.bowlingdekegel.be/",
+  "selected_template": "gym / sports template from agency-hotspot.zip",
+  "pages": {
+    "bowling": {
+      "title": "Bowling",
+      "intro": "Kom je voor de wedstrijd of voor de gezelligheid? Het kan allebei op onze moderne bowlingbanen.",
+      "image": "https://www.bowlingdekegel.be/img/gallery/bowling/3.jpg",
+      "sections": [
+        [
+          "Prijzen",
+          [
+            "Normaal tarief: € 38 per uur per baan",
+            "Keuze uit classic of hyper bowlen",
+            "Aanbevolen 5 à 6 personen per baan",
+            "Bowlingschoenen gratis in bruikleen"
+          ]
+        ]
+      ]
+    },
+    "hit-it": {
+      "title": "Hit It Arena",
+      "intro": "Een 9,5 meter hoog hindernissenparcours waarbij deelnemers zoveel mogelijk punten verzamelen door tags te scannen.",
+      "image": "https://www.bowlingdekegel.be/img/gallery/hitit/hitit1_800.jpg",
+      "sections": [
+        [
+          "Prijzen",
+          [
+            "Per persoon voor sessie van 20 minuten",
+            "€ 15: eerste deelname met polsbandje van € 2 inbegrepen",
+            "€ 13: u bent reeds in het bezit van een bandje",
+            "Anti-slip sokken zijn verplicht en ter plaatse verkrijgbaar voor € 2",
+            "Minimum leeftijd 8 jaar en 1m20 lengte"
+          ]
+        ]
+      ]
+    },
+    "experimental-park": {
+      "title": "Experimental Park",
+      "intro": "Opening 7 februari! Na een ongelukkig experiment bevindt professor Albert Hashtag zich gevangen in de kronkels van de tijdcorridors. Jouw missie is om zoveel mogelijk energie te verzamelen om terug te keren naar het heden. Teams van max 5 spelers per team.",
+      "image": "https://www.bowlingdekegel.be/img/gallery/exppark/exppark1.jpg",
+      "sections": [
+        [
+          "Prijzen",
+          [
+            "2 formules",
+            "Per persoon voor sessie van 1 uur: € 21",
+            "Per persoon voor sessie van 1,5 uur: € 30"
+          ]
+        ]
+      ]
+    },
+    "karting": {
+      "title": "Karting",
+      "intro": "Met Formule E-Karting biedt De Kegel X-treme het enige racecircuit langs de Vlaamse Kust. De nieuwste generatie elektrische karts zijn zero-emission, geluidsarm en geven een ultrasensatie met maximaal koppel op elk moment.",
+      "image": "https://www.bowlingdekegel.be/img/gallery/karting/_MG_8746.jpg",
+      "sections": [
+        [
+          "Memberkaart",
+          [
+            "Iedereen is verplicht zich te registreren. Hierbij verkrijgt men een memberkaart van € 2 die één jaar geldig is. Je snelste tijden worden bijgehouden en race resultaten kunnen na elke race doorgemaild worden. Minimumlengte is 1m40."
+          ]
+        ],
+        [
+          "Prijzen",
+          [
+            "Normaal tarief: € 17 per persoon",
+            "1ste heat: € 17",
+            "Volgende heats op dezelfde dag: € 15",
+            "Memberkaart verplicht: € 2",
+            "Minimumlengte: 1m40"
+          ]
+        ],
+        [
+          "Huisregels",
+          [
+            "Hou rekening met anderen en respecteer andermans bezittingen",
+            "Volg altijd de instructies van staff en baanverantwoordelijken",
+            "Helm en veiligheidsgordel verplicht",
+            "Gesloten schoenen verplicht",
+            "Roekeloos rijden, botsen, hinderen, slippen en in tegengestelde richting rijden zijn verboden"
+          ]
+        ]
+      ]
+    },
+    "laser": {
+      "title": "Laser shooting",
+      "intro": "Een spannende buitenaardse wereld om de strijd in aan te gaan met vrienden, interactieve doelen en vijanden in het labyrint.",
+      "image": "https://www.bowlingdekegel.be/img/gallery/laser/a.JPG",
+      "sections": [
+        [
+          "Prijzen",
+          [
+            "Normaal tarief: € 15 per persoon",
+            "1 x Laser shooting",
+            "Duurtijd 20 minuten"
+          ]
+        ]
+      ]
+    },
+    "minigolf": {
+      "title": "Minigolf",
+      "intro": "Een uitdagende mini golf baan in Formule 1 thema die jong en oud zal verrassen en vermaken. Ontdek de Formule 1, betreedt de magische wereld van glow in the dark en versla je tegenstanders. Nieuw: 5 nieuwe minigolf holes in dino thema.",
+      "image": "https://www.bowlingdekegel.be/img/gallery/minigolf/foto%202.JPG",
+      "sections": [
+        [
+          "Prijzen",
+          [
+            "Normaal tarief: € 9 per persoon",
+            "1 x Mini golf"
+          ]
+        ]
+      ]
+    },
+    "adventure-park": {
+      "title": "Adventure Park",
+      "intro": "Wij bieden een uitdagend hoogteparcours aan voor jong en oud, met 6 unieke routes. De rode, bruine en zwarte routes zijn enkel toegankelijk voor klimmers die zonder problemen de gele route hebben overwonnen.",
+      "image": "https://www.bowlingdekegel.be/img/gallery/adventurepark/IMG_5477.JPG",
+      "sections": [
+        [
+          "Routes",
+          [
+            "2 groene junior/initiatie routes vanaf 1m20, adviesleeftijd vanaf 6 jaar, klimhoogte 1m50 en einde met zipline",
+            "Gele route vanaf 1m40 onder begeleiding van meeklimmende volwassene, klimhoogte 4,5 tot 5 meter",
+            "Rode route vanaf 1m50, tot 12 jaar onder begeleiding, klimhoogte 4,5 tot 5 meter",
+            "Bruine route vanaf 1m60, klimhoogte 7,5 tot 8 meter",
+            "Zwarte route vanaf 1m60, klimhoogte 8 tot 10 meter"
+          ]
+        ],
+        [
+          "Prijs",
+          [
+            "€ 15 per persoon voor 1 uur klimplezier",
+            "Open vanaf de paasvakantie tot eind september tijdens schoolvakanties en weekends"
+          ]
+        ],
+        [
+          "Regels en tips",
+          [
+            "Losse voorwerpen zijn in de routes niet toegestaan",
+            "Veiligheidshelm verplicht",
+            "Open schoeisel of teenslippers niet toegestaan",
+            "Klimmen zonder gordel en instructie is verboden",
+            "Maximum toegelaten gewicht: 120 kg",
+            "Trek stevige schoenen en geschikte kledij aan",
+            "Bij onweer of calamiteiten worden de routes ontruimd"
+          ]
+        ]
+      ]
+    }
+  },
+  "activities": [
+    {
+      "title": "Bowling",
+      "slug": "bowling.html",
+      "img": "https://www.bowlingdekegel.be/img/gallery/bowling/3.jpg",
+      "text": "Kom je voor de wedstrijd of voor de gezelligheid? Het kan allebei op onze moderne bowlingbanen.",
+      "price": "€ 38 per uur per baan",
+      "meta": [
+        "Classic of hyper bowlen",
+        "Aanbevolen 5 à 6 personen per baan",
+        "Bowlingschoenen gratis in bruikleen"
+      ]
+    },
+    {
+      "title": "Karting",
+      "slug": "karting.html",
+      "img": "https://www.bowlingdekegel.be/img/gallery/karting/_MG_8746.jpg",
+      "text": "Het enige Formule E-Karting racecircuit langs de Vlaamse Kust, met elektrische karts: zero-emission, geluidsarm en superpower.",
+      "price": "€ 17 per persoon",
+      "meta": [
+        "Volgende heats dezelfde dag: € 15",
+        "Memberkaart verplicht: € 2",
+        "Minimumlengte: 1m40"
+      ]
+    },
+    {
+      "title": "Laser shooting",
+      "slug": "laser.html",
+      "img": "https://www.bowlingdekegel.be/img/gallery/laser/a.JPG",
+      "text": "Een spannende buitenaardse wereld om de strijd in aan te gaan met vrienden, interactieve doelen en vijanden in het labyrint.",
+      "price": "€ 15 per persoon",
+      "meta": [
+        "1 x Laser shooting",
+        "Duurtijd 20 minuten",
+        "Vanaf 8 jaar"
+      ]
+    },
+    {
+      "title": "Minigolf",
+      "slug": "minigolf.html",
+      "img": "https://www.bowlingdekegel.be/img/gallery/minigolf/foto%202.JPG",
+      "text": "Een uitdagende minigolfbaan in Formule 1-thema, met glow in the dark en nieuwe holes in dino-thema.",
+      "price": "€ 9 per persoon",
+      "meta": [
+        "1 x Mini golf",
+        "Voor jong en oud",
+        "Formule 1 & dino thema"
+      ]
+    },
+    {
+      "title": "Adventure Park",
+      "slug": "adventure-park.html",
+      "img": "https://www.bowlingdekegel.be/img/gallery/adventurepark/IMG_5477.JPG",
+      "text": "Een uitdagend hoogteparcours voor jong en oud, met 6 unieke routes en ziplines.",
+      "price": "€ 15 per persoon",
+      "meta": [
+        "1 uur klimplezier",
+        "Vanaf 1m20 voor juniorroutes",
+        "Open paasvakantie tot eind september"
+      ]
+    },
+    {
+      "title": "Hit It Arena",
+      "slug": "hit-it.html",
+      "img": "https://www.bowlingdekegel.be/img/gallery/hitit/hitit1_800.jpg",
+      "text": "Een 9,5 meter hoog hindernissenparcours waarbij deelnemers zoveel mogelijk punten verzamelen door tags te scannen.",
+      "price": "Vanaf € 13 per persoon",
+      "meta": [
+        "Sessie van 20 minuten",
+        "Polsbandje eerste deelname inbegrepen",
+        "Antislip sokken verplicht"
+      ]
+    },
+    {
+      "title": "Experimental Park",
+      "slug": "experimental-park.html",
+      "img": "https://www.bowlingdekegel.be/img/gallery/exppark/exppark1.jpg",
+      "text": "Help professor Albert Hashtag ontsnappen uit de tijdcorridors door zoveel mogelijk energie te verzamelen.",
+      "price": "Vanaf € 21 per persoon",
+      "meta": [
+        "Sessie van 1 uur: € 21",
+        "Sessie van 1,5 uur: € 30",
+        "Teams van max. 5 spelers"
+      ]
+    }
+  ],
+  "galleries": {
+    "Bowling": [
+      "https://www.bowlingdekegel.be/img/gallery/bowling/3.jpg",
+      "https://www.bowlingdekegel.be/img/gallery/bowling/2.jpg",
+      "https://www.bowlingdekegel.be/img/gallery/bowling/1.jpg",
+      "https://www.bowlingdekegel.be/img/gallery/bowling/4.jpg",
+      "https://www.bowlingdekegel.be/img/gallery/bowling/5.jpg"
+    ],
+    "Karting": [
+      "https://www.bowlingdekegel.be/img/gallery/karting/_MG_8746.jpg",
+      "https://www.bowlingdekegel.be/img/gallery/karting/_MG_8739.jpg",
+      "https://www.bowlingdekegel.be/img/gallery/karting/_MG_8748.jpg",
+      "https://www.bowlingdekegel.be/img/gallery/karting/_MG_8754.jpg"
+    ],
+    "Laser": [
+      "https://www.bowlingdekegel.be/img/gallery/laser/a.JPG",
+      "https://www.bowlingdekegel.be/img/gallery/laser/b.JPG",
+      "https://www.bowlingdekegel.be/img/gallery/laser/c.JPG",
+      "https://www.bowlingdekegel.be/img/gallery/laser/d.JPG"
+    ],
+    "Minigolf": [
+      "https://www.bowlingdekegel.be/img/gallery/minigolf/foto%202.JPG",
+      "https://www.bowlingdekegel.be/img/gallery/minigolf/foto%201.JPG",
+      "https://www.bowlingdekegel.be/img/gallery/minigolf/foto%203.JPG"
+    ],
+    "Adventure Park": [
+      "https://www.bowlingdekegel.be/img/gallery/adventurepark/IMG_5477.JPG"
+    ],
+    "Hit It Arena": [
+      "https://www.bowlingdekegel.be/img/gallery/hitit/hitit1_800.jpg"
+    ],
+    "Experimental Park": [
+      "https://www.bowlingdekegel.be/img/gallery/exppark/exppark1.jpg"
+    ]
+  },
+  "hours": [
+    "Maandag gesloten",
+    "Dinsdag gesloten",
+    "Woensdag vanaf 14u00",
+    "Donderdag gesloten",
+    "Vrijdag vanaf 14u00",
+    "Zaterdag vanaf 12u00",
+    "Zondag 12u00 - 19u00"
+  ],
+  "contact": {
+    "name": "De Kegel X-treme",
+    "address": "Westendelaan 98, 8430 Middelkerke",
+    "tel": "059/44.79.81",
+    "email": "bowlingdekegel@telenet.be",
+    "btw": "BE0457.828.914"
+  },
+  "note": "Afbeeldingen worden als externe bron-URL gebruikt omdat de container geen internetdownload kon uitvoeren. De site toont ze live zolang bowlingdekegel.be ze beschikbaar houdt."
+}
