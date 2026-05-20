@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - develop
+      - templates
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
