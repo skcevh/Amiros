@@ -606,6 +606,10 @@ header{
         padding: 0px 30px !important;
     }
 
+    .nomobileborder{
+        border: none !important;
+    }
+
     .nomobilemargin{
         margin: 0px !important;
     }
