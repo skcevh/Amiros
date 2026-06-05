@@ -606,6 +606,10 @@ header{
         padding: 0px 30px !important;
     }
 
+    .nomobileborder{
+        border: none !important;
+    }
+
     .nomobilemargin{
         margin: 0px !important;
     }
@@ -1365,7 +1369,6 @@ background: linear-gradient(
 .why-text .container{
     position: absolute;
     top:100px;
-    width:300px;
 }
 
 .why-text .container:nth-child(1){
