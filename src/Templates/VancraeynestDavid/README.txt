@@ -1,11 +1,1 @@
-Nieuwe layout voor Vancraeynest David.
-
-Bestanden:
-- index.html
-- aanleg.html
-- projecten.html
-- contact.html
-- assets/style.css
-- content-extractie.json
-
-De foto's worden rechtstreeks geladen vanaf vancraeynestdavid.be/wp-content/uploads.
+Deze zip bevat 5 verschillende layoutvoorstellen voor Vancraeynest David. De afbeeldingen zijn live gelinkt naar de originele website. Start met index.html in de root.

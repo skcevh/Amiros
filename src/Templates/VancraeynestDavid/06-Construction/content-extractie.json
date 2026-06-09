@@ -1,0 +1,31 @@
+{
+  "source": "https://vancraeynestdavid.be/",
+  "template": "constructed.zip - one-page construction landing template",
+  "generated_pages": [
+    "index.html"
+  ],
+  "notes": [
+    "Afbeeldingen zijn live gelinkt naar de originele website; ze zijn niet fysiek gedownload.",
+    "Formulier is visueel voorzien en moet nog gekoppeld worden aan mail/backend.",
+    "Fonts directory uit output weggelaten."
+  ],
+  "contact": {
+    "phone": "+32 497 70 24 80",
+    "email": "info@vancraeynestdavid.be",
+    "address": "Barnestraat 4, Koekelare",
+    "hours": "Ma - Zat: 07:00-19:00"
+  },
+  "images": [
+    "https://vancraeynestdavid.be/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-23-at-22.09.38.jpeg",
+    "https://vancraeynestdavid.be/wp-content/uploads/2024/08/Vancraeynest-camionette.jpg",
+    "https://vancraeynestdavid.be/wp-content/uploads/2024/08/452259689_516118380982003_6519486935497959164_n-1.jpg",
+    "https://vancraeynestdavid.be/wp-content/uploads/2024/08/451859645_516118434315331_7615749135463584467_n-1.jpg",
+    "https://vancraeynestdavid.be/wp-content/uploads/2024/08/452444014_516118234315351_6407061543405629369_n.jpg",
+    "https://vancraeynestdavid.be/wp-content/uploads/2024/04/429888533_429859779607864_8904458065257774994_n.jpg",
+    "https://vancraeynestdavid.be/wp-content/uploads/2025/08/20250623_175122-2-scaled.jpg",
+    "https://vancraeynestdavid.be/wp-content/uploads/2025/08/20250523_113009-2-scaled.jpg",
+    "https://vancraeynestdavid.be/wp-content/uploads/2025/08/20250710_101543-1-scaled.jpg",
+    "https://vancraeynestdavid.be/wp-content/uploads/2024/04/332861939_2238008513068587_6295679429046837867_n.jpg",
+    "https://vancraeynestdavid.be/wp-content/uploads/2024/04/357054033_292431256684051_795896584224100263_n.jpg"
+  ]
+}

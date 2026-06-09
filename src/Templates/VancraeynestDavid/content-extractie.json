@@ -1,6 +1,59 @@
 {
-  "source": "https://vancraeynestdavid.be/",
-  "chosen_template": "construction / local service layout",
-  "pages": ["index.html", "aanleg.html", "projecten.html", "contact.html"],
-  "note": "Afbeeldingen zijn externe links naar de originele website omdat de sandbox geen directe internetdownload toelaat."
+  "content": {
+    "name": "Vancraeynest David",
+    "tagline": "Uw specialist in terrassen, opritten en vloeren",
+    "phone": "+32 497 70 24 80",
+    "phone_raw": "+32497/70.24.80",
+    "email": "info@vancraeynestdavid.be",
+    "address": "Barnestraat 4, Koekelare",
+    "hours": "Ma - Zat: 07:00-19:00",
+    "intro": "David Vancraeynest is een toegewijde zelfstandige vloerder met een passie voor vakmanschap en precisie. Zijn expertise strekt zich uit over diverse gebieden, waaronder het leggen van opritten, terrassen, kasseien en vloeren. Met jarenlange ervaring in de branche heeft hij een reputatie opgebouwd voor hoogwaardige afwerkingen en klanttevredenheid.",
+    "intro2": "David staat bekend om zijn oog voor detail en zijn vermogen om de visie van zijn klanten tot leven te brengen, of het nu gaat om een strak modern terras of een rustieke kasseien oprit. Zijn doel is duurzame en functionele oplossingen te bieden die jarenlang meegaan.",
+    "aanleg": "David Vancraeynest is dé expert voor stenen vloeren, opritten en terrassen in Gistel en omstreken. Met vakmanschap en passie voor natuurlijke materialen levert hij oplossingen op maat die aansluiten bij de wensen van zijn klanten. Met een transparante aanpak en open communicatie begeleidt hij klanten van eerste consult tot voltooiing.",
+    "testimonial": "Duidelijk een man met ervaring. Sympathiek en helpt meedenken met de klant. Ik kan hem zeker aanraden!",
+    "testimonial2": "David is een uitstekende professionele vloerder met oog voor detail. Hij is spontaan, klantvriendelijk en altijd aanspreekbaar voor eventuele problemen. Zijn precisie en zorgvuldigheid maken hem een topkeuze voor vloerprojecten.",
+    "services": [
+      [
+        "Terrassen en opritten",
+        "Vakkundige aanleg van terrassen en opritten met aandacht voor duurzaamheid, afwatering en afwerking."
+      ],
+      [
+        "Kasseien",
+        "Nauwkeurig gelegde kasseien voor karaktervolle paden, opritten en buitenruimtes."
+      ],
+      [
+        "Vloeren",
+        "Binnen- en buitenvloeren die praktisch, strak en duurzaam afgewerkt worden."
+      ],
+      [
+        "Riolering",
+        "Voorbereidende werken en riolering als onderdeel van een totaalproject."
+      ]
+    ],
+    "stats": [
+      [
+        "20+",
+        "jaar ervaring"
+      ],
+      [
+        "24u",
+        "antwoord op aanvraag"
+      ],
+      [
+        "100%",
+        "focus op afwerking"
+      ]
+    ]
+  },
+  "images": {
+    "logo": "https://vancraeynestdavid.be/wp-content/uploads/2021/06/house-logo1-80x34.png",
+    "van": "https://vancraeynestdavid.be/wp-content/uploads/2024/08/Vancraeynest-camionette.jpg",
+    "terrace": "https://vancraeynestdavid.be/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-23-at-22.09.38-1024x768.jpeg",
+    "path": "https://vancraeynestdavid.be/wp-content/uploads/2024/08/451859645_516118434315331_7615749135463584467_n.jpg",
+    "path2": "https://vancraeynestdavid.be/wp-content/uploads/2024/08/452259689_516118380982003_6519486935497959164_n-1.jpg",
+    "square": "https://vancraeynestdavid.be/wp-content/uploads/2024/04/332861939_2238008513068587_6295679429046837867_n.jpg",
+    "walk": "https://vancraeynestdavid.be/wp-content/uploads/2024/04/371532745_325470173380159_3550938830791651273_n.jpg",
+    "floor": "https://vancraeynestdavid.be/wp-content/uploads/2024/04/429888533_429859779607864_8904458065257774994_n.jpg",
+    "curve": "https://vancraeynestdavid.be/wp-content/uploads/2024/08/452259674_516118264315348_6162825611081878244_n.jpg"
+  }
 }
