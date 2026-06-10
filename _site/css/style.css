@@ -2789,6 +2789,17 @@ button.bg-color-black:hover {
     margin-top:5px;
 }
 
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.check-item i {
+    flex: 0 0 auto;
+    margin-top: 2px;
+}
+
 
 .info-box{
     background-color: #fff;
@@ -2858,6 +2869,23 @@ button.bg-color-black:hover {
     margin-right:5px;
     margin-bottom: 20px;
     line-height: 1.2;
+}
+
+.website-features-grid > [class*="col-"] {
+    display: flex;
+}
+
+.website-features-grid .info-box {
+    width: 100%;
+    max-width: none;
+    min-height: 250px;
+    max-height: none;
+}
+
+@media (max-width: 767px) {
+    .website-features-grid .info-box {
+        min-height: 0;
+    }
 }
 
 .process-steps {
