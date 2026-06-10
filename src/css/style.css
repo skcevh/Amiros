@@ -2896,6 +2896,27 @@ button.bg-color-black:hover {
     max-height: none;
 }
 
+.partner-basic-note-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+}
+
+.partner-basic-note-card {
+    display: flex;
+}
+
+.partner-basic-note-card .info-box {
+    width: fit-content;
+    max-width: 640px;
+    padding-left: 36px;
+    padding-right: 36px;
+    width:380px;
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .software-steps-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2905,6 +2926,15 @@ button.bg-color-black:hover {
 @media (max-width: 767px) {
     .website-features-grid .info-box {
         min-height: 0;
+    }
+
+    .partner-basic-note-card {
+        width: 100%;
+    }
+
+    .partner-basic-note-card .info-box {
+        width: 100%;
+        max-width: none;
     }
 
     .software-steps-grid {
