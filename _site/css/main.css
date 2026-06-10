@@ -1568,6 +1568,8 @@ background: linear-gradient(
     color:white;
     padding:10px 50px ;
     font-size:26px;
+    min-width: 250px;
+    text-align: center;
 }
 
 
