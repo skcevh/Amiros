@@ -1,0 +1,1535 @@
+Functionele analyse — Amiros offertesysteem
+1. Doel van het offertesysteem
+Het offertesysteem moet bezoekers van de Amiros-website begeleiden naar een duidelijke en gerichte aanvraag.
+Vandaag kan een bezoeker een algemeen contactformulier invullen. Het nieuwe systeem moet slimmer werken. Een bezoeker vertrekt vanuit een concrete interesse, bijvoorbeeld:
+•	Ik wil Website Start
+•	Ik wil Website Basis
+•	Ik wil Website Plus
+•	Ik wil Amiros Launch
+•	Ik wil een logo
+•	Ik wil online afspraken
+•	Ik wil digitale ondersteuning
+•	Ik wil software op maat
+•	Ik weet nog niet wat ik nodig heb
+Daarna stelt het systeem gerichte vragen. Op basis van de antwoorden toont het systeem eventueel relevante extra’s, een betere pakketkeuze of een totaalpakket.
+Het doel is niet om automatisch een definitieve offerte te maken. Het doel is om voldoende informatie te verzamelen zodat Amiros nadien snel en correct een offerte op maat kan opmaken.
+________________________________________
+2. Belangrijk uitgangspunt
+De offerteflow mag niet aanvoelen als een webshop met allemaal losse extra kosten.
+Daarom gelden deze regels:
+Prijzen wel tonen in de flow
+De volgende prijzen mogen zichtbaar zijn in de flow:
+•	Website Start
+•	Website Basis
+•	Website Plus
+•	Website Custom / Maatwerk vanafprijs
+•	Amiros Launch
+•	Amiros Grow
+•	Amiros Premium
+•	AmirosPlanner
+•	Partner Basic
+•	Partner Business
+•	Partner Premium
+•	vaste maandelijkse abonnementen
+Deze prijzen zijn duidelijk, pakketmatig of terugkerend.
+Prijzen niet tonen in de flow
+De volgende prijzen worden niet standaard zichtbaar getoond in de flow:
+•	logo
+•	logo herwerken
+•	visitekaartjes
+•	flyer / affiche / poster
+•	stickers
+•	raam-, muur- of spandoekontwerp
+•	e-mailhandtekening
+•	tekstschrijven
+•	stockbeelden
+•	SEO boost
+•	extra pagina’s
+•	extra revisies
+•	maatwerkuren
+•	spoedlevering
+Voor deze losse extra’s toont het systeem enkel een interessekaart zonder prijs.
+De exacte prijs komt pas later in de offerte.
+Standaardtekst bij losse extra’s
+We nemen dit mee in je offerte
+
+Je hoeft nu nog niets definitief te beslissen. Duid aan waar je interesse in hebt, dan bekijken we dit mee in je voorstel.
+________________________________________
+3. Kernregel van het systeem
+De commerciële logica blijft eenvoudig:
+Eén losse nood = losse optie tonen.
+Online afspraken nodig = AmirosPlanner tonen.
+Meerdere startnoden = Amiros Launch tonen.
+Website + branding + groei = Amiros Grow tonen.
+Volledige begeleiding + support = Amiros Premium tonen.
+Te grote scope = upgrade tonen.
+Onduidelijk = adviesflow.
+Voorbeelden:
+Klant kiest Website Start en heeft geen logo.
+→ Logo als losse interesse tonen.
+
+Klant kiest Website Start, heeft geen logo, geen teksten en geen domeinnaam.
+→ Amiros Launch voorstellen.
+
+Klant kiest Website Basis, wil logo, visitekaartje, SEO en planner.
+→ Amiros Grow voorstellen.
+
+Klant wil website, branding, IT setup, support en veel begeleiding.
+→ Amiros Premium voorstellen.
+
+Klant wil alleen online afspraken.
+→ AmirosPlanner los voorstellen.
+________________________________________
+4. Centrale werking
+Alle offerteknoppen gaan naar één centrale pagina:
+/offerte-aanvragen.html
+De juiste flow wordt bepaald via een URL-parameter:
+/offerte-aanvragen.html?flow=website-start
+/offerte-aanvragen.html?flow=website-basis
+/offerte-aanvragen.html?flow=website-plus
+/offerte-aanvragen.html?flow=website-custom
+/offerte-aanvragen.html?flow=amiros-launch
+/offerte-aanvragen.html?flow=amiros-grow
+/offerte-aanvragen.html?flow=amiros-premium
+/offerte-aanvragen.html?flow=planner
+/offerte-aanvragen.html?flow=branding
+/offerte-aanvragen.html?flow=logo-nieuw
+/offerte-aanvragen.html?flow=logo-herwerken
+/offerte-aanvragen.html?flow=drukwerk
+/offerte-aanvragen.html?flow=partner-basic
+/offerte-aanvragen.html?flow=partner-business
+/offerte-aanvragen.html?flow=partner-premium
+/offerte-aanvragen.html?flow=software
+/offerte-aanvragen.html?flow=advies
+Als er geen flow wordt meegegeven, start het systeem automatisch met:
+/offerte-aanvragen.html?flow=advies
+________________________________________
+5. Algemene stappen in elke flow
+Elke flow bestaat uit dezelfde structuur.
+Stap 1 — Keuze bevestigen
+Stap 2 — Contactgegevens
+Stap 3 — Projectvragen
+Stap 4 — Aanbevolen opties
+Stap 5 — Samenvatting
+Stap 6 — Verzenden
+Visueel:
+┌──────────────────────────────────────┐
+│ Stap 1: keuze bevestigen             │
+│ Je koos: Website Start               │
+│ Korte uitleg                         │
+│ Prijs indien hoofdpakket             │
+│ [Verdergaan]                         │
+└──────────────────────────────────────┘
+
+┌──────────────────────────────────────┐
+│ Stap 2: contactgegevens              │
+│ Naam, bedrijf, e-mail, telefoon      │
+└──────────────────────────────────────┘
+
+┌──────────────────────────────────────┐
+│ Stap 3: projectvragen                │
+│ Vragen afhankelijk van gekozen flow  │
+└──────────────────────────────────────┘
+
+┌──────────────────────────────────────┐
+│ Stap 4: aanbevolen opties            │
+│ Extra’s, planner, upgrade of pakket  │
+└──────────────────────────────────────┘
+
+┌──────────────────────────────────────┐
+│ Stap 5: samenvatting                 │
+│ Controle voor verzending             │
+└──────────────────────────────────────┘
+
+┌──────────────────────────────────────┐
+│ Stap 6: verzonden                    │
+│ Bedanktbericht                       │
+└──────────────────────────────────────┘
+________________________________________
+6. Algemene teksten
+Titel offertepagina
+Vraag je offerte aan
+Algemene intro
+Vertel ons kort wat je nodig hebt. Op basis van je antwoorden bekijken we welke oplossing het best past bij je zaak, je timing en je verwachtingen.
+Tekst bij aanbevelingen
+Aanbevolen voor jouw aanvraag
+
+Op basis van je antwoorden tonen we enkele opties die mogelijk interessant zijn. Je gekozen pakket blijft behouden, tenzij je zelf een andere keuze maakt.
+Tekst bij losse opties zonder prijs
+Los toe te voegen
+
+Deze optie kan apart worden meegenomen in je offerte. Je hoeft nu nog niets definitief te beslissen.
+Tekst bij beter passend pakket
+Past mogelijk beter
+
+Je aanvraag lijkt iets ruimer dan je oorspronkelijke keuze. Daarom tonen we ook een pakket dat mogelijk beter aansluit.
+Tekst bij planner
+Online afspraken nodig?
+
+Met AmirosPlanner kunnen klanten zelf online een afspraak maken. Dat bespaart tijd en geeft je meer overzicht in je agenda.
+Knop:
+AmirosPlanner toevoegen — €14,99 / maand
+Tekst op samenvattingsscherm
+Controleer je aanvraag
+
+Klopt alles? Dan bezorgen we je een duidelijk voorstel op maat.
+Bedankttekst
+Bedankt voor je aanvraag
+
+We hebben je gegevens goed ontvangen. We bekijken je aanvraag en bezorgen je binnenkort een duidelijk voorstel dat past bij je project.
+________________________________________
+7. Contactgegevens
+Deze stap komt in elke flow.
+Titel
+Jouw gegevens
+Intro
+Laat je gegevens achter zodat we je aanvraag correct kunnen opvolgen.
+Velden
+Verplicht:
+Naam
+E-mailadres
+Telefoonnummer
+Optioneel:
+Bedrijfsnaam
+Bestaande website
+Ondernemingsnummer
+Extra opmerking
+Validatie
+Vul je naam in.
+Vul een geldig e-mailadres in.
+Vul je telefoonnummer in.
+________________________________________
+8. Flow: Advies
+URL
+/offerte-aanvragen.html?flow=advies
+Doel
+Voor bezoekers die nog niet exact weten wat ze nodig hebben.
+Stap 1 tekst
+Weet je nog niet precies wat je nodig hebt?
+
+Geen probleem. Beantwoord enkele korte vragen en we denken met je mee. Zo kunnen we inschatten of je eerder een website, branding, planner, supportpakket, Amiros-pakket of software op maat nodig hebt.
+Vragen
+Waarvoor zoek je vooral hulp?
+- Nieuwe website
+- Bestaande website verbeteren
+- Logo of branding
+- Online afspraken
+- Digitale ondersteuning
+- Software of automatisatie
+- Ik weet het nog niet
+
+Ben je net gestart?
+- Ja
+- Nee
+- Binnenkort
+
+Heb je al een website?
+- Ja
+- Nee
+- In opbouw
+
+Heb je al een logo?
+- Ja
+- Ja, maar het mag opgefrist worden
+- Nee
+
+Wil je klanten online afspraken laten maken?
+- Ja
+- Misschien
+- Nee
+
+Wil je vooral beter zichtbaar zijn?
+- Ja
+- Nee
+- Ik weet het niet
+
+Wil je maandelijks ondersteuning?
+- Ja
+- Misschien
+- Nee
+Aanbevelingen
+Nieuwe zaak zonder website en logo
+Toon:
+Amiros Launch bekijken
+Tekst:
+Omdat je nog geen website en geen logo hebt, kan Amiros Launch een goede start zijn. Dit pakket combineert een one-page website, domein, hosting, onderhoud, AmirosPlanner en een basiskeuze voor logo of visitekaartje.
+Website + branding + groei
+Toon:
+Amiros Grow bekijken
+Tekst:
+Je aanvraag gaat verder dan enkel online staan. Amiros Grow is interessant wanneer je een website, logo, visitekaartje, planner en digitale basis samen wil opstarten.
+Volledige begeleiding
+Toon:
+Amiros Premium bekijken
+Tekst:
+Je aanvraag lijkt breder dan één losse dienst. Amiros Premium is bedoeld voor ondernemers die Amiros als digitale partner willen voor website, branding, planner, IT-opstart, support en advies.
+Alleen online afspraken
+Toon:
+AmirosPlanner toevoegen — €14,99 / maand
+Tekst:
+Als je vooral online afspraken wil laten maken, kan AmirosPlanner los toegevoegd worden zonder dat je meteen een groter pakket nodig hebt.
+Software of automatisatie
+Toon:
+Software op maat bespreken
+Tekst:
+Je geeft aan dat je iets wil automatiseren of verbeteren. We bekijken dit best als software- of maatwerkvraag.
+________________________________________
+9. Flow: Website Start
+URL
+/offerte-aanvragen.html?flow=website-start
+Pakketinfo
+Website Start
+€995 eenmalig
+€62 hosting / maand
+Stap 1 tekst
+Je koos Website Start.
+
+Dit pakket is ideaal voor starters en kleine ondernemingen die snel professioneel online willen staan. Je krijgt een one-page website met mobiel design, contactformulier en basis SEO.
+Vragen
+Wat doet je bedrijf?
+Welke diensten of producten bied je aan?
+Wie zijn je klanten?
+Heb je al een logo?
+Heb je al teksten?
+Heb je al foto’s of beeldmateriaal?
+Heb je al een domeinnaam?
+Wil je klanten online afspraken laten maken?
+Wil je hulp met lokale zichtbaarheid in Google?
+Wanneer wil je online gaan?
+Antwoordopties
+Logo:
+Ja
+Ja, maar het mag opgefrist worden
+Nee
+Teksten:
+Ja
+Gedeeltelijk
+Nee
+Foto’s:
+Ja
+Gedeeltelijk
+Nee
+Online afspraken:
+Ja
+Misschien
+Nee
+Timing:
+Zo snel mogelijk
+Binnen 1 maand
+Binnen 2-3 maanden
+Geen haast
+Aanbevelingen
+Geen logo
+Toon kaart:
+Logo laten voorzien
+
+Je gaf aan dat je nog geen logo hebt. We kunnen dit apart meenemen in je voorstel, zodat je website meteen professioneler en herkenbaarder overkomt.
+
+[Interesse in logo]
+[Ik beslis later]
+Ook tonen:
+Amiros Launch bekijken
+€1.590 incl. btw
+
+Omdat je naast een website ook een visuele basis nodig hebt, kan Amiros Launch interessanter zijn. Daarin zitten een one-page website, domein, hosting eerste jaar, onderhoud, AmirosPlanner en keuze tussen basislogo of visitekaartje.
+
+[Amiros Launch kiezen]
+[Website Start behouden]
+Logo opfrissen
+Toon:
+Logo laten opfrissen
+
+Je behoudt de herkenbaarheid van je bestaande logo, maar we nemen een opfrissing mee in je offerte zodat het beter past bij je nieuwe website.
+
+[Interesse in logo-opfrissing]
+[Ik beslis later]
+Online afspraken
+Toon altijd bij “Ja” of “Misschien”:
+AmirosPlanner toevoegen
+€14,99 / maand
+
+Laat klanten online afspraken maken via een eenvoudige agenda. Ideaal als je minder tijd wil verliezen met berichten en telefoons.
+
+[AmirosPlanner toevoegen]
+[Ik beslis later]
+Geen teksten
+Toon:
+Teksten laten schrijven
+
+Je gaf aan dat je nog geen volledige teksten hebt. We kunnen tekstschrijven meenemen in je offerte, zodat je website duidelijk en professioneel wordt ingevuld.
+
+[Interesse in teksten]
+[Ik beslis later]
+Geen foto’s
+Toon:
+Beeldmateriaal voorzien
+
+Heb je nog geen foto’s of beelden? Dan kunnen we passende beelden voorzien die aansluiten bij je sector en uitstraling.
+
+[Interesse in beelden]
+[Ik beslis later]
+Lokale zichtbaarheid
+Toon:
+Lokale SEO meenemen
+
+Wil je beter gevonden worden in je regio? Dan kunnen we lokale SEO en je online zichtbaarheid meenemen in het voorstel.
+
+[Interesse in lokale SEO]
+[Ik beslis later]
+Te veel inhoud voor one-page
+Als klant meerdere pagina’s nodig heeft:
+Website Basis lijkt beter te passen
+
+Je aanvraag lijkt ruimer dan een one-page website. Website Basis is beter wanneer je aparte pagina’s wil voor bijvoorbeeld diensten, over ons, realisaties en contact.
+
+[Website Basis kiezen]
+[Website Start behouden]
+________________________________________
+10. Flow: Website Basis
+URL
+/offerte-aanvragen.html?flow=website-basis
+Pakketinfo
+Website Basis
+€1.390 eenmalig
+€62 hosting / maand
+Stap 1 tekst
+Je koos Website Basis.
+
+Dit pakket is geschikt voor zelfstandigen en kleine KMO’s die meer willen dan een one-page website. Je krijgt een professionele website tot maximaal 5 pagina’s, mobiel design, contactformulier en basis SEO.
+Vragen
+Welke pagina’s heb je nodig?
+Hoeveel pagina’s verwacht je ongeveer?
+Heb je al teksten per pagina?
+Heb je al foto’s?
+Heb je al een logo?
+Wil je klanten online afspraken laten maken?
+Wil je hulp met Google Business of lokale vindbaarheid?
+Wil je ook visitekaartjes of flyers?
+Wanneer wil je online gaan?
+Pagina-opties:
+Home
+Diensten
+Over ons
+Realisaties
+Prijzen
+Reviews
+Contact
+FAQ
+Andere
+Aanbevelingen
+Online afspraken
+AmirosPlanner toevoegen
+€14,99 / maand
+
+Voeg online afspraken toe aan je website, zodat klanten zelf een moment kunnen kiezen.
+
+[AmirosPlanner toevoegen]
+[Ik beslis later]
+Meer dan 5 pagina’s
+Website Plus lijkt beter te passen
+
+Je gaf aan dat je meer dan 5 pagina’s nodig hebt. Website Plus geeft meer ruimte voor inhoud, structuur en uitbreiding.
+
+[Website Plus kiezen]
+[Website Basis behouden]
+Logo nodig
+Logo laten voorzien
+
+Een professioneel logo zorgt ervoor dat je website sterker en herkenbaarder overkomt. We kunnen dit meenemen in je offerte.
+
+[Interesse in logo]
+[Ik beslis later]
+Logo + visitekaartje + website
+Amiros Grow bekijken
+€2.390 incl. btw
+
+Je aanvraag gaat verder dan enkel een website. Amiros Grow combineert website, logo, visitekaartje, domein, hosting eerste jaar, onderhoud en AmirosPlanner.
+
+[Amiros Grow kiezen]
+[Website Basis behouden]
+Lokale SEO
+Lokale SEO meenemen
+
+We kunnen lokale vindbaarheid meenemen in je voorstel zodat klanten je makkelijker terugvinden in Google.
+
+[Interesse in lokale SEO]
+[Ik beslis later]
+________________________________________
+11. Flow: Website Plus
+URL
+/offerte-aanvragen.html?flow=website-plus
+Pakketinfo
+Website Plus
+€3.630 eenmalig
+€79 hosting / maand
+Stap 1 tekst
+Je koos Website Plus.
+
+Dit pakket is geschikt voor groeiende bedrijven die meer pagina’s, meer structuur en meer mogelijkheden nodig hebben. Website Plus bevat maximaal 12 pagina’s, meertaligheid NL/FR, mobiel design en 6 maanden hosting en onderhoud.
+Vragen
+Hoeveel pagina’s verwacht je?
+Moet de website meertalig zijn?
+Wil je blog of nieuwsberichten?
+Wil je portfolio of realisaties tonen?
+Wil je online afspraken laten maken?
+Wil je meerdere formulieren?
+Wil je koppelingen met externe tools?
+Heb je logo of branding nodig?
+Wil je maandelijkse ondersteuning na oplevering?
+Wanneer wil je online gaan?
+Aanbevelingen
+Planner
+AmirosPlanner toevoegen
+€14,99 / maand
+
+Interessant wanneer klanten rechtstreeks via je website afspraken moeten kunnen boeken.
+
+[AmirosPlanner toevoegen]
+[Ik beslis later]
+Branding nodig
+Branding meenemen
+
+Je gaf aan dat je nog branding nodig hebt. We kunnen logo, visitekaartje of ander grafisch materiaal meenemen in de offerte.
+
+[Interesse in branding]
+[Ik beslis later]
+Website + branding + planner
+Amiros Grow of Premium bekijken
+
+Omdat je naast een uitgebreide website ook branding en online afspraken nodig hebt, kan een Amiros-pakket interessanter zijn dan alles apart samen te stellen.
+
+[Amiros Grow bekijken]
+[Amiros Premium bekijken]
+[Website Plus behouden]
+Maatwerkfuncties
+Website op maat bespreken
+
+Je aanvraag bevat functies die mogelijk buiten een standaard website vallen. We bekijken dit best als maatwerk.
+
+[Website op maat bespreken]
+[Website Plus behouden]
+Maandelijkse ondersteuning
+Partner Business bekijken
+€299 / maand
+
+Handig als je na oplevering regelmatig hulp wil bij aanpassingen, tools of digitale ondersteuning.
+
+[Partner Business bekijken]
+[Ik beslis later]
+________________________________________
+12. Flow: Website Custom / Maatwerk
+URL
+/offerte-aanvragen.html?flow=website-custom
+Pakketinfo
+Website Custom / Maatwerk
+Vanaf €5.500
+Stap 1 tekst
+Je koos Website Custom.
+
+Deze flow is bedoeld voor websites die meer nodig hebben dan een standaardpakket, zoals maatwerkdesign, integraties, webshop, boekingssysteem, portaal of specifieke functionaliteit.
+Vragen
+Wat moet de website kunnen?
+Wie gebruikt de website?
+Zijn er klantenaccounts nodig?
+Moeten klanten iets kunnen boeken, aanvragen, betalen of uploaden?
+Zijn er koppelingen nodig met andere software?
+Is er een bestaande website of database?
+Wil je online afspraken laten maken?
+Heb je voorbeelden van websites die je goed vindt?
+Heb je een deadline?
+Heb je een budgetindicatie?
+Aanbevelingen
+Online afspraken
+AmirosPlanner toevoegen
+€14,99 / maand
+
+Als je vooral afspraken wil laten boeken, kan AmirosPlanner een eenvoudige oplossing zijn zonder volledig maatwerk.
+
+[AmirosPlanner toevoegen]
+[Ik beslis later]
+Veel automatisatie
+Software op maat bespreken
+
+Je aanvraag lijkt meer op een softwareproject dan op een gewone website. We bekijken dit best als maatwerkoplossing.
+
+[Software bespreken]
+[Website Custom behouden]
+Volledige begeleiding
+Amiros Premium bekijken
+€4.990 incl. btw
+
+Interessant wanneer je naast website, planner, branding en ondersteuning ook bredere digitale begeleiding wil.
+
+[Amiros Premium bekijken]
+[Website Custom behouden]
+________________________________________
+13. Flow: AmirosPlanner
+URL
+/offerte-aanvragen.html?flow=planner
+Productinfo
+AmirosPlanner
+€14,99 / maand
+Stap 1 tekst
+Je koos AmirosPlanner.
+
+Met AmirosPlanner kunnen klanten online een afspraak maken. Jij behoudt overzicht in je agenda en verliest minder tijd met heen-en-weer berichten.
+Vragen
+Waarvoor wil je online afspraken gebruiken?
+Hoeveel agenda’s heb je nodig?
+Werk je alleen of met meerdere personen?
+Wil je afspraken automatisch laten bevestigen?
+Moeten klanten bepaalde gegevens invullen bij het boeken?
+Heb je al een website?
+Wil je de planner koppelen aan je website?
+Wil je hulp bij de opstart?
+Aantal agenda’s:
+1 agenda
+2 agenda’s
+3 of meer agenda’s
+Ik weet het nog niet
+Website:
+Ja
+Nee
+In opbouw
+Aanbevelingen
+Geen website
+Website Start bekijken
+
+Je hebt nog geen website. Als je wil dat klanten online afspraken kunnen boeken, is een eenvoudige website met AmirosPlanner vaak een goede combinatie.
+
+[Website Start bekijken]
+[Alleen AmirosPlanner behouden]
+Starter zonder website of logo
+Amiros Launch bekijken
+€1.590 incl. btw
+
+Amiros Launch bevat een one-page website, domein, hosting eerste jaar, onderhoud, AmirosPlanner en keuze tussen basislogo of visitekaartje.
+
+[Amiros Launch kiezen]
+[Alleen AmirosPlanner behouden]
+Meerdere diensten of uitgebreidere zaak
+Amiros Grow bekijken
+€2.390 incl. btw
+
+Interessant als je naast online afspraken ook een uitgebreidere website, logo en visitekaartje nodig hebt.
+
+[Amiros Grow kiezen]
+[Alleen AmirosPlanner behouden]
+Meer agenda’s
+Extra agenda’s nodig
+
+Je gaf aan dat je meerdere agenda’s nodig hebt. We nemen dit mee in je offerte zodat we dit correct kunnen bekijken.
+
+[Extra agenda’s meenemen]
+[Ik beslis later]
+________________________________________
+14. Flow: Branding algemeen
+URL
+/offerte-aanvragen.html?flow=branding
+Stap 1 tekst
+Je zoekt hulp met branding.
+
+Branding zorgt ervoor dat je zaak professioneel, herkenbaar en betrouwbaar overkomt. Kies hieronder wat je nodig hebt, dan bekijken we dit mee in je voorstel.
+Vragen
+Waarvoor zoek je hulp?
+Heb je al een logo?
+Heb je ook een website nodig?
+Wil je online afspraken aanbieden?
+Heb je drukwerk nodig?
+Welke uitstraling past bij je zaak?
+Wanneer heb je dit nodig?
+Keuzes:
+Nieuw logo
+Logo opfrissen
+Visitekaartje
+Flyer / affiche / poster
+Sticker
+Raam-, muur- of spandoek
+E-mailhandtekening
+Volledige uitstraling
+Aanbevelingen
+Alleen logo
+Logo laten ontwerpen
+
+Je gaf aan dat je een nieuw logo nodig hebt. We nemen dit mee in je offerte en bekijken welk type logo-ontwerp het best past.
+
+[Interesse in logo]
+[Ik beslis later]
+Logo uitgebreider
+Uitgebreider logo-ontwerp bekijken
+
+Als je meer variatie, meer voorstellen of meer revisiemogelijkheden wil, kunnen we een uitgebreider logo-ontwerp meenemen in je offerte.
+
+[Interesse in uitgebreid logo]
+[Ik beslis later]
+Logo + website
+Amiros Launch bekijken
+€1.590 incl. btw
+
+Omdat je naast branding ook een website nodig hebt, kan Amiros Launch interessanter zijn dan alles apart te nemen.
+
+[Amiros Launch kiezen]
+[Branding behouden]
+Branding + website + planner
+Amiros Grow bekijken
+€2.390 incl. btw
+
+Je aanvraag bevat branding, website en online afspraken. Amiros Grow combineert deze onderdelen in één duidelijke opstartformule.
+
+[Amiros Grow kiezen]
+[Branding behouden]
+Alleen afspraken
+AmirosPlanner toevoegen
+€14,99 / maand
+
+Ook zonder groter pakket kan de planner los worden toegevoegd als je klanten online afspraken wil laten maken.
+
+[AmirosPlanner toevoegen]
+[Ik beslis later]
+________________________________________
+15. Flow: Logo nieuw
+URL
+/offerte-aanvragen.html?flow=logo-nieuw
+Stap 1 tekst
+Je wil een nieuw logo laten ontwerpen.
+
+We bekijken samen welke uitstraling bij je zaak past en of je enkel een logo nodig hebt of ook andere zaken zoals een website, visitekaartje of planner.
+Vragen
+Wat is de naam van je zaak?
+Wat doet je zaak?
+Welke stijl past bij je zaak?
+Waarvoor wil je het logo gebruiken?
+Heb je kleuren in gedachten?
+Heb je voorbeelden die je mooi vindt?
+Heb je ook een website nodig?
+Wil je online afspraken aanbieden?
+Wil je ook visitekaartjes of ander drukwerk?
+Stijlopties:
+Modern
+Strak
+Luxe
+Speels
+Vertrouwd
+Zakelijk
+Ambachtelijk
+Ik weet het nog niet
+Aanbevelingen
+Alleen logo
+Logo meenemen in offerte
+
+Goed als je snel een professioneel logo nodig hebt. We bekijken in de offerte welk logo-ontwerp het best past.
+
+[Logo meenemen]
+[Ik beslis later]
+Meer uitwerking
+Uitgebreider logo-ontwerp meenemen
+
+Interessant als je meer voorstellen, meer variatie en meer ruimte voor feedback wil.
+
+[Uitgebreid logo meenemen]
+[Ik beslis later]
+Logo + visitekaartje
+Visitekaartje meenemen
+
+Een visitekaartje zorgt ervoor dat je nieuwe logo meteen ook offline professioneel gebruikt kan worden.
+
+[Visitekaartje meenemen]
+[Ik beslis later]
+Logo + website
+Amiros Launch bekijken
+€1.590 incl. btw
+
+Als je naast een logo ook een website nodig hebt, kan Amiros Launch interessanter zijn dan alles apart te nemen.
+
+[Amiros Launch kiezen]
+[Logo-aanvraag behouden]
+Logo + website + planner
+Amiros Launch of Grow bekijken
+
+Omdat je ook online afspraken wil aanbieden, kan een Amiros-pakket interessant zijn. De AmirosPlanner zit in de Amiros-pakketten inbegrepen tijdens het eerste jaar.
+
+[Amiros Launch bekijken]
+[Amiros Grow bekijken]
+[Logo-aanvraag behouden]
+________________________________________
+16. Flow: Logo herwerken
+URL
+/offerte-aanvragen.html?flow=logo-herwerken
+Stap 1 tekst
+Je wil je logo laten opfrissen.
+
+We bekijken of je huidige logo vooral gemoderniseerd moet worden, of dat een combinatie van opfrissen en nieuw ontwerp beter past.
+Vragen
+Heb je het huidige logo digitaal?
+Wat stoort je aan het huidige logo?
+Moet het herkenbaar blijven?
+Wil je ook een volledig nieuw voorstel zien?
+Waarvoor moet het logo gebruikt worden?
+Heb je ook je website nodig of wil je die vernieuwen?
+Wil je online afspraken aanbieden?
+Aanbevelingen
+Alleen moderniseren
+Logo laten opfrissen
+
+Goed als je huidige logo herkenbaar mag blijven maar professioneler moet ogen. We nemen dit mee in je offerte.
+
+[Logo-opfrissing meenemen]
+[Ik beslis later]
+Twijfel tussen update en nieuw
+Logo opfrissen + nieuw voorstel
+
+Interessant als je wil vergelijken tussen een opgefrist bestaand logo en een volledig nieuw ontwerp.
+
+[Beide opties meenemen]
+[Ik beslis later]
+Website ook nodig
+Website Basis of Amiros Grow bekijken
+
+Omdat je naast je logo ook je website wil aanpakken, kan het beter zijn om je uitstraling en website samen te bekijken.
+
+[Website Basis bekijken]
+[Amiros Grow bekijken]
+[Logo-aanvraag behouden]
+Planner
+AmirosPlanner toevoegen
+€14,99 / maand
+
+Als klanten online afspraken moeten kunnen maken, kan de planner los worden toegevoegd.
+
+[AmirosPlanner toevoegen]
+[Ik beslis later]
+________________________________________
+17. Flow: Drukwerk
+URL
+/offerte-aanvragen.html?flow=drukwerk
+Stap 1 tekst
+Je wil drukwerk of visueel materiaal laten ontwerpen.
+
+Kies wat je nodig hebt. We zorgen voor een professioneel ontwerp dat drukklaar kan worden aangeleverd.
+Vragen
+Wat wil je laten ontwerpen?
+Heb je al een logo?
+Heb je al teksten?
+Heb je beelden of foto’s?
+Welke afmetingen heb je nodig?
+Moet het drukwerk passen bij een bestaande huisstijl?
+Heb je ook een website nodig?
+Wil je online afspraken aanbieden?
+Wanneer heb je dit nodig?
+Keuzes:
+Visitekaartje
+Flyer
+Affiche
+Poster
+Sticker
+Raamreclame
+Muurontwerp
+Spandoek
+E-mailhandtekening
+Aanbevelingen
+Geen logo
+Logo meenemen
+
+Voor drukwerk is een goed logo belangrijk. Als je nog geen logo hebt, raden we aan om dit mee te bekijken in je offerte.
+
+[Logo meenemen]
+[Ik beslis later]
+Website nodig
+Amiros Launch of Grow bekijken
+
+Je aanvraag bevat branding en mogelijk ook een website. Een Amiros-pakket kan interessanter zijn dan losse onderdelen.
+
+[Amiros Launch bekijken]
+[Amiros Grow bekijken]
+[Drukwerk behouden]
+Planner
+AmirosPlanner toevoegen
+€14,99 / maand
+
+Handig als je klanten vanuit je flyer, affiche of website rechtstreeks online een afspraak wil laten maken.
+
+[AmirosPlanner toevoegen]
+[Ik beslis later]
+________________________________________
+18. Flow: Amiros Launch
+URL
+/offerte-aanvragen.html?flow=amiros-launch
+Pakketinfo
+Amiros Launch
+€1.590 incl. btw
+Vanaf jaar 2: €55 / maand
+Stap 1 tekst
+Je koos Amiros Launch.
+
+Dit pakket is ideaal als je snel wil starten met een professionele online basis. Je krijgt een one-page website, domein, hosting, onderhoud, AmirosPlanner en een basiskeuze voor logo of visitekaartje.
+Inbegrepen
+One-page website met max. 4 categorieën
+Mobielvriendelijk design
+Contactformulier
+Domeinnaam
+Hosting eerste jaar
+Website onderhoud
+Updates
+Back-ups
+Beveiliging
+Basis on-page SEO
+AmirosPlanner met 1 agenda
+Keuze: basislogo of visitekaartje basisontwerp
+1 instapvisie van 30 minuten
+1 revisie logo
+1 algemene revisie website
+Niet inbegrepen
+Drukwerk
+Extra pagina’s
+Extra revisies
+Copywriting
+Stockfoto’s
+IT setup
+Hardware
+Maatwerk software
+Vragen
+Ben je net gestart?
+Heb je al een bedrijfsnaam?
+Heb je al een logo?
+Kies je liever voor basislogo of visitekaartje?
+Heb je al teksten?
+Heb je al foto’s?
+Heb je al een domeinnaam?
+Waarvoor wil je AmirosPlanner gebruiken?
+Wanneer wil je lanceren?
+Aanbevelingen
+Meer pagina’s nodig
+Amiros Grow lijkt beter te passen
+€2.390 incl. btw
+
+Je gaf aan dat je meer inhoud of meerdere pagina’s nodig hebt. Grow biedt meer ruimte en bevat logo + visitekaartje.
+
+[Amiros Grow kiezen]
+[Amiros Launch behouden]
+Geen teksten
+Tekstschrijven meenemen
+
+Copywriting zit niet standaard in Launch. We kunnen dit apart meenemen in je offerte als je hulp wil met teksten.
+
+[Teksten meenemen]
+[Ik beslis later]
+Foto’s nodig
+Beeldmateriaal meenemen
+
+Stockfoto’s zitten niet standaard inbegrepen, maar kunnen apart meegenomen worden in je offerte.
+
+[Beelden meenemen]
+[Ik beslis later]
+Extra pagina
+Extra pagina’s nodig
+
+Launch is beperkt tot een one-page met max. 4 categorieën. Als je extra pagina’s nodig hebt, nemen we dit mee in de offerte of bekijken we of Grow beter past.
+
+[Extra pagina’s meenemen]
+[Amiros Grow bekijken]
+[Amiros Launch behouden]
+________________________________________
+19. Flow: Amiros Grow
+URL
+/offerte-aanvragen.html?flow=amiros-grow
+Pakketinfo
+Amiros Grow
+€2.390 incl. btw
+Vanaf jaar 2: €79 / maand
+Stap 1 tekst
+Je koos Amiros Grow.
+
+Dit pakket is geschikt als je meer wil dan enkel online staan. Je krijgt een website, logo, visitekaartje, AmirosPlanner en een basis IT-opstart.
+Inbegrepen
+One-page max. 7 categorieën of website tot 5 pagina’s
+Mobielvriendelijk design
+Contactformulier
+Domeinnaam
+Hosting eerste jaar
+Website onderhoud
+Updates
+Back-ups
+Beveiliging
+Basis on-page SEO
+AmirosPlanner met 1 agenda
+Logo ontwerp
+Visitekaartje ontwerp voor 1 persoon
+IT basis setup voor max. 1 toestel
+Business mail instellen
+Office account koppelen
+Antivirus installatie voor 1 jaar
+1 instapvisie
+1 algemene revisie website + logo
+Niet inbegrepen
+Drukwerk
+Extra pagina’s
+Extra revisies
+Copywriting
+Stockfoto’s
+Hardware
+Complexe IT-omgevingen
+Maatwerk software
+Vragen
+Wil je een one-page of meerdere pagina’s?
+Welke pagina’s heb je nodig?
+Heb je al een logo of starten we vanaf nul?
+Heb je teksten klaar?
+Heb je foto’s klaar?
+Gebruik je al een zakelijke mailbox?
+Wil je online afspraken aanbieden?
+Heb je één toestel dat ingesteld moet worden?
+Wanneer wil je starten?
+Aanbevelingen
+Kleine aanvraag
+Amiros Launch kan voldoende zijn
+€1.590 incl. btw
+
+Als je vooral snel online wil met een beperkte one-page website, kan Launch voldoende zijn.
+
+[Amiros Launch bekijken]
+[Amiros Grow behouden]
+Grotere aanvraag
+Amiros Premium lijkt beter te passen
+€4.990 incl. btw
+
+Je aanvraag bevat meer pagina’s, meer begeleiding of meer ondersteuning dan standaard in Grow voorzien is.
+
+[Amiros Premium bekijken]
+[Amiros Grow behouden]
+Extra tekst
+Tekstschrijven meenemen
+
+Copywriting zit niet standaard in Grow en kan apart meegenomen worden in je offerte.
+
+[Teksten meenemen]
+[Ik beslis later]
+Extra pagina
+Extra pagina’s nodig
+
+Grow is beperkt tot one-page max. 7 categorieën of een website tot 5 pagina’s. Extra pagina’s kunnen worden meegenomen in de offerte.
+
+[Extra pagina’s meenemen]
+[Ik beslis later]
+________________________________________
+20. Flow: Amiros Premium
+URL
+/offerte-aanvragen.html?flow=amiros-premium
+Pakketinfo
+Amiros Premium
+€4.990 incl. btw
+Vanaf jaar 2: €229 / maand
+.
+Stap 1 tekst
+Je koos Amiros Premium.
+
+Dit pakket is bedoeld voor ondernemers die Amiros als digitale partner willen. Je krijgt een uitgebreide website, branding, planner, IT-opstart, support en strategisch advies.
+Inbegrepen
+Website tot max. 12 pagina’s
+Mobielvriendelijk design
+Blog of portfolio mogelijk
+Domeinnaam
+Hosting eerste jaar
+Website onderhoud
+Updates
+Back-ups
+Beveiliging
+Kwaliteitschecks
+Basis on-page SEO
+AmirosPlanner met 2 agenda’s
+Logo ontwerp
+Visitekaartje ontwerp
+Flyer of raamsticker
+IT basis setup voor max. 2 toestellen
+Business mail instellen
+Office account koppelen
+Antivirus installatie voor 1 jaar
+2 uur support per maand in jaar 1
+Korte strategische adviesmomenten van max. 30 minuten
+Max. 1 revisie per pagina website
+2 revisierondes branding
+Niet inbegrepen
+Drukwerk
+Extra revisies
+Extra pagina’s
+Copywriting
+Stockfoto’s
+Hardware
+Maatwerk software
+Grote automatisaties
+Vragen
+Hoeveel pagina’s verwacht je?
+Wil je een blog of portfolio?
+Hoeveel agenda’s heb je nodig?
+Welke brandingonderdelen heb je nodig?
+Welke toestellen moeten ingesteld worden?
+Heb je al zakelijke mailboxen?
+Welke ondersteuning verwacht je maandelijks?
+Zijn er automatisaties of maatwerk nodig?
+Wanneer wil je starten?
+Aanbevelingen
+Software nodig
+Software op maat bespreken
+
+Maatwerksoftware en grote automatisaties zitten niet standaard in Premium. We bekijken dit best als apart project.
+
+[Software bespreken]
+[Amiros Premium behouden]
+Meer support nodig
+Extra support meenemen
+
+Premium bevat 2 uur support per maand. Als je meer ondersteuning verwacht, nemen we extra support mee in je offerte.
+
+[Extra support meenemen]
+[Ik beslis later]
+Meer agenda’s
+Extra agenda’s nodig
+
+Premium bevat 2 agenda’s. Als je meer agenda’s nodig hebt, nemen we dit mee in je offerte.
+
+[Extra agenda’s meenemen]
+[Ik beslis later]
+________________________________________
+21. Flow: Partner Basic
+URL
+/offerte-aanvragen.html?flow=partner-basic
+Pakketinfo
+Partner Basic
+€119 / maand
+1 uur per maand
+Extra uren: €60 / uur
+Minimumcontract: 6 maanden
+Stap 1 tekst
+Je koos Partner Basic.
+
+Dit pakket is geschikt voor kleine zelfstandigen of klanten met een basis digitale omgeving die af en toe ondersteuning nodig hebben.
+Vragen
+Waarvoor zoek je ondersteuning?
+Heb je al een website?
+Heb je al een zakelijke mailbox?
+Heb je vaak kleine technische vragen?
+Heb je online afspraken nodig?
+Verwacht je meer dan 1 uur hulp per maand?
+Moeten we soms ter plaatse komen?
+Aanbevelingen
+Meer hulp nodig
+Partner Business lijkt beter te passen
+€299 / maand
+
+Je verwacht regelmatig ondersteuning. Business bevat 3 uur per maand en meer prioriteit.
+
+[Partner Business kiezen]
+[Partner Basic behouden]
+Planner
+AmirosPlanner toevoegen
+€14,99 / maand
+
+Ook als supportklant kan je de planner los toevoegen om online afspraken te beheren.
+
+[AmirosPlanner toevoegen]
+[Ik beslis later]
+Nog geen website
+Amiros Launch bekijken
+€1.590 incl. btw
+
+Als je nog geen digitale basis hebt, is het vaak beter om eerst website, hosting en planner goed op te zetten.
+
+[Amiros Launch bekijken]
+[Partner Basic behouden]
+________________________________________
+22. Flow: Partner Business
+URL
+/offerte-aanvragen.html?flow=partner-business
+Pakketinfo
+Partner Business
+€299 / maand
+3 uur per maand
+Extra uren: €60 / uur
+Minimumcontract: 6 maanden
+Meest gekozen
+Stap 1 tekst
+Je koos Partner Business.
+
+Dit pakket is bedoeld voor zelfstandigen en kleine bedrijven die regelmatig digitale ondersteuning nodig hebben.
+Vragen
+Waarvoor wil je vooral ondersteuning?
+Heb je vaak website-aanpassingen?
+Heb je hulp nodig bij e-mail of tools?
+Wil je advies rond automatisatie?
+Heb je online afspraken nodig?
+Zijn er terugkerende problemen?
+Verwacht je meer dan 3 uur hulp per maand?
+Aanbevelingen
+Meer prioriteit
+Partner Premium lijkt beter te passen
+€449 / maand
+
+Je aanvraag wijst op meer ondersteuning of hogere prioriteit.
+
+[Partner Premium kiezen]
+[Partner Business behouden]
+Automatisatie
+Software op maat bespreken
+
+Als bepaalde problemen vaak terugkomen, kan automatisatie interessanter zijn dan telkens supporturen gebruiken.
+
+[Software bespreken]
+[Partner Business behouden]
+Planner
+AmirosPlanner toevoegen
+€14,99 / maand
+
+Handig als je online afspraken wil beheren naast je supportpakket.
+
+[AmirosPlanner toevoegen]
+[Ik beslis later]
+________________________________________
+23. Flow: Partner Premium
+URL
+/offerte-aanvragen.html?flow=partner-premium
+Pakketinfo
+Partner Premium
+€449 / maand
+5 uur per maand
+Extra uren: €60 / uur
+Minimumcontract: 6 maanden
+Stap 1 tekst
+Je koos Partner Premium.
+
+Dit pakket is bedoeld voor bedrijven die Amiros als vaste digitale partner willen en regelmatig ondersteuning nodig hebben.
+Vragen
+Welke ondersteuning verwacht je?
+Heb je meerdere systemen of gebruikers?
+Heb je nood aan hoogste prioriteit?
+Wil je strategisch digitaal advies?
+Heb je automatisaties nodig?
+Wil je online afspraken beheren?
+Zijn er grotere projecten gepland?
+Aanbevelingen
+Software
+Software op maat bespreken
+
+Grote automatisaties of softwareontwikkeling vallen buiten supporturen en worden apart geoffreerd.
+
+[Software bespreken]
+[Partner Premium behouden]
+Planner
+AmirosPlanner toevoegen
+€14,99 / maand
+
+De planner kan los toegevoegd worden voor online afspraken en agenda-opvolging.
+
+[AmirosPlanner toevoegen]
+[Ik beslis later]
+Volledig pakket
+Amiros Premium bekijken
+€4.990 incl. btw
+
+Als je naast support ook website, branding, planner en IT-opstart nodig hebt, kan Amiros Premium interessanter zijn.
+
+[Amiros Premium bekijken]
+[Partner Premium behouden]
+________________________________________
+24. Flow: Software / maatwerk
+URL
+/offerte-aanvragen.html?flow=software
+Productinfo
+Software project
+€84 / uur of projectprijs
+Stap 1 tekst
+Je wil software of automatisatie bespreken.
+
+We bekijken wat vandaag tijd kost, welke tools je gebruikt en of maatwerksoftware een oplossing kan zijn.
+Vragen
+Wat wil je automatiseren of verbeteren?
+Hoe gebeurt dit vandaag?
+Welke software gebruik je nu?
+Waar verlies je het meeste tijd?
+Wie gaat de oplossing gebruiken?
+Moet er iets gekoppeld worden?
+Heb je Excelbestanden, documenten of voorbeelden?
+Wil je online afspraken of planning integreren?
+Is er een deadline?
+Wil je eerst een analysegesprek?
+Aanbevelingen
+Kleine terugkerende hulp
+Partner Business bekijken
+€299 / maand
+
+Als je vooral regelmatig advies of kleine ondersteuning nodig hebt, kan Partner Business beter passen dan een softwareproject.
+
+[Partner Business bekijken]
+[Software-aanvraag behouden]
+Online afspraken
+AmirosPlanner bekijken
+€14,99 / maand
+
+Als je vooral afspraken en agenda wil beheren, kan AmirosPlanner voldoende zijn zonder maatwerksoftware.
+
+[AmirosPlanner toevoegen]
+[Software-aanvraag behouden]
+Website + software
+Website Custom bespreken
+
+Als de software vooral gekoppeld is aan je website, bekijken we dit als maatwerkwebsite of webapplicatie.
+
+[Website Custom bekijken]
+[Software-aanvraag behouden]
+________________________________________
+25. Globale upsellregels
+Regel 1 — Planner overal tonen bij afspraakbehoefte
+Als de klant ergens aangeeft:
+online afspraken
+agenda
+boekingen
+reservaties
+planning
+consultaties
+plaatsbezoeken
+intakegesprekken
+afspraken via website
+dan toont het systeem:
+AmirosPlanner toevoegen
+€14,99 / maand
+Tekst:
+Met AmirosPlanner kunnen klanten zelf online een afspraak maken. Dat bespaart tijd en geeft je meer overzicht in je planning.
+Regel 2 — Geen website + planner nodig
+Toon:
+Website Start + AmirosPlanner
+of:
+Amiros Launch
+Tekst:
+Omdat je nog geen website hebt, is het vaak interessanter om de planner meteen goed te koppelen aan een eenvoudige website.
+Regel 3 — Geen logo
+Toon zonder prijs:
+Logo laten voorzien
+Tekst:
+Je gaf aan dat je nog geen logo hebt. We kunnen dit apart meenemen in je offerte zodat je website of drukwerk meteen herkenbaarder wordt.
+Als ook website nodig is:
+Amiros Launch bekijken
+Regel 4 — Logo + visitekaartje + website
+Toon:
+Amiros Grow bekijken
+Tekst:
+Je aanvraag bevat meerdere onderdelen: website, branding en offline uitstraling. Amiros Grow kan dan overzichtelijker zijn dan losse onderdelen.
+Regel 5 — Veel begeleiding + support
+Toon:
+Amiros Premium bekijken
+Tekst:
+Je aanvraag lijkt breder dan één losse dienst. Amiros Premium is bedoeld voor ondernemers die Amiros als digitale partner willen.
+Regel 6 — Meerdere kleine losse opties
+Als klant meer dan twee losse opties aanduidt:
+Je aanvraag bevat meerdere losse onderdelen. Een Amiros-pakket kan overzichtelijker en interessanter zijn.
+Regel 7 — Te grote website
+Website Start + meerdere pagina’s
+→ Website Basis tonen
+
+Website Basis + meer dan 5 pagina’s
+→ Website Plus tonen
+
+Website Plus + maatwerkfuncties
+→ Website Custom of Software tonen
+________________________________________
+26. Losse add-ons voor interne configuratie
+Deze opties moeten intern configureerbaar zijn, maar in de flow niet standaard met prijs getoond worden.
+Logo nieuw basis
+Logo nieuw uitgebreid
+Logo herwerken / moderniseren
+Logo herwerken + nieuw logo
+Visitekaartje
+Flyer / affiche / poster
+Sticker ontwerp
+Raam-, muur- of spandoek ontwerp
+E-mailhandtekening
+Extra revisierondes
+Spoedlevering
+Extra pagina
+Tekstschrijven
+Foto’s / stockbeeldpakket
+SEO boost lokaal
+Maatwerk / extra uren website
+Software / maatwerk
+Extra support
+Deze optie wordt wel met prijs getoond:
+AmirosPlanner — €14,99 / maand
+Deze abonnementen worden ook met prijs getoond:
+Partner Basic — €119 / maand
+Partner Business — €299 / maand
+Partner Premium — €449 / maand
+________________________________________
+27. Samenvattingsscherm
+Voor verzending toont het systeem:
+Je aanvraag
+
+Gekozen startflow:
+Website Start
+
+Gekozen eindoptie:
+Website Start behouden
+
+Toegevoegde opties:
+AmirosPlanner — €14,99 / maand
+Logo laten voorzien
+
+Aanbevolen door systeem:
+Amiros Launch
+Website Basis
+
+Aanbevolen maar niet gekozen:
+Amiros Launch
+
+Contactgegevens:
+Naam
+Bedrijf
+E-mail
+Telefoon
+Website
+
+Projectinformatie:
+Alle antwoorden
+
+Opmerking:
+Vrij tekstveld
+Knoppen:
+Vorige
+Aanvraag verzenden
+________________________________________
+28. E-mail naar Amiros
+Onderwerp
+Nieuwe offerteaanvraag via Amiros — Website Start
+Inhoud
+Nieuwe offerteaanvraag via Amiros
+
+Startflow:
+Website Start
+
+Gekozen eindoptie:
+Website Start behouden
+
+Gekozen add-ons:
+- AmirosPlanner — €14,99 / maand
+- Logo laten voorzien
+
+Aanbevolen door systeem:
+- Amiros Launch
+- Website Basis
+
+Klant:
+Naam:
+Bedrijf:
+E-mail:
+Telefoon:
+Bestaande website:
+
+Antwoorden:
+- Wat doet je bedrijf?
+- Heeft logo?
+- Heeft teksten?
+- Heeft foto’s?
+- Heeft domeinnaam?
+- Wil online afspraken?
+- Timing?
+
+Vrij bericht:
+...
+Belangrijk: in de mail naar Amiros mogen interne prijzen eventueel wel zichtbaar zijn als Cedric dit later wil. In de klantflow worden losse extra’s zonder prijs getoond.
+________________________________________
+29. Bevestigingsmail naar klant
+Onderwerp
+We hebben je aanvraag goed ontvangen
+Tekst
+Hallo [naam],
+
+Bedankt voor je aanvraag bij Amiros.
+
+We hebben je gegevens goed ontvangen en bekijken welke oplossing het best past bij je project. Je ontvangt binnenkort een duidelijk voorstel of we nemen contact met je op als we nog iets moeten verduidelijken.
+
+Samenvatting van je aanvraag:
+- Gekozen dienst of pakket: [pakket]
+- Extra opties/interesses: [add-ons]
+- Timing: [timing]
+
+Groeten,
+Amiros
+________________________________________
+30. Privacy en toestemming
+Onderaan het formulier moet verplicht staan:
+Ik ga akkoord dat Amiros mijn gegevens gebruikt om mijn aanvraag te beantwoorden.
+Met link naar:
+Privacyverklaring
+Zonder akkoord mag het formulier niet verzonden worden.
+________________________________________
+31. Spamprotectie
+Voor versie 1:
+Verborgen honeypotveld
+Minimale invultijd
+Rate limiting indien API
+Geen automatische verzending als honeypot ingevuld is
+________________________________________
+32. Functionele prioriteit
+Fase 1
+Eerst bouwen:
+Adviesflow
+Website Start
+Website Basis
+Website Plus
+Amiros Launch
+AmirosPlanner als losse upsell
+Samenvatting
+E-mail naar Amiros
+GDPR-checkbox
+Fase 2
+Daarna bouwen:
+Logo nieuw
+Logo herwerken
+Branding
+Drukwerk
+Amiros Grow
+Amiros Premium
+Fase 3
+Daarna bouwen:
+Partner Basic
+Partner Business
+Partner Premium
+Software
+Databaseopslag
+Adminoverzicht
+________________________________________
+33. Open punten die intern bevestigd moeten worden
+1. Amiros Premium prijs:
+   In de pakketbeschrijving en vergelijking staat €4.990.
+   In het inkomstenvoorbeeld staat €5.990.
+   Voorlopig gebruiken we €4.990, maar dit moet bevestigd worden.
+
+2. Afstandstabel support:
+   Er staat “>20 km €0”.
+   Vermoedelijk moet dit “<20 km €0” zijn.
+   Dit moet bevestigd worden.
+
+3. Extra agenda vanaf 3 agenda’s:
+   Prijs staat als nog definitief te bepalen.
+   Voorlopig tonen als “we nemen dit mee in je offerte”.
+
+4. Zakelijke mailbox:
+   De mailboxprijs mag enkel correct getoond worden als duidelijk is dat er ook een Office-licentie nodig is.
+________________________________________
+34. Acceptatiecriteria
+Het systeem is functioneel correct wanneer:
+Elke knop naar de juiste flow gaat.
+Elke flow de juiste starttekst toont.
+Elke flow de juiste vragen toont.
+Contactgegevens verplicht gevalideerd worden.
+AmirosPlanner overal als losse upsell kan verschijnen.
+AmirosPlanner met prijs getoond wordt.
+Pakketten en abonnementen met prijs getoond worden.
+Losse extra’s zonder prijs getoond worden.
+Losse extra’s wel als interesse kunnen worden aangeduid.
+Aanbevelingen verschijnen op basis van antwoorden.
+De klant zijn oorspronkelijke keuze kan behouden.
+De klant een upgrade of pakket kan kiezen.
+De klant een samenvatting krijgt voor verzending.
+De aanvraagmail alle antwoorden bevat.
+De privacycheckbox verplicht is.
+Na verzending een duidelijke bedanktmelding verschijnt.
+
+
+

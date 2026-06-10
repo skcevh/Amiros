@@ -1,0 +1,40 @@
+---
+permalink: offerte-aanvragen.html
+---
+
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <%- include('_includes/metas.ejs') %>
+    <%- include('_includes/googletags.ejs') %>
+    <title>Amiros - Vraag je offerte aan</title>
+    <%- include('_includes/css.ejs') %>
+</head>
+
+<body class="with-out-frame">
+    <%- include('_includes//banner.ejs', { title: 'Vraag je offerte aan',
+        subtitle: 'Vertel ons kort wat je nodig hebt.',
+        text: 'Op basis van je antwoorden bekijken we welke oplossing het best past bij je zaak, je timing en je verwachtingen.' }) %>
+
+    <section class="bg-white offerte-flow-section">
+        <div class="container-wrap">
+            <div class="row justify-center">
+                <div class="col-md-10 col-sm-12 text-body wow fadeInUp" data-wow-delay=".2s">
+                    <div id="offerte-app" class="offerte-app" data-default-flow="advies">
+                        <div class="offerte-progress" id="offerte-progress"></div>
+                        <div id="offerte-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('_includes/footer.ejs') %>
+    <%- include('_includes/navbar.ejs') %>
+    <%- include('_includes/cookies.ejs') %>
+    <%- include('_includes/scripts.ejs') %>
+    <script src="js/offerte-aanvragen.js"></script>
+</body>
+
+</html>
