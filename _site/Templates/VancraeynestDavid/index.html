@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vancraeynest David - 5 layoutvoorstellen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            color: #222
+        }
+
+        .wrap {
+            width: min(980px, 92vw);
+            margin: 70px auto
+        }
+
+        h1 {
+            font-size: 42px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px
+        }
+
+        .v {
+            display: block;
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: #222;
+            box-shadow: 0 10px 30px #0001
+        }
+
+        .v b {
+            display: block;
+            font-size: 22px;
+            margin-bottom: 10px
+        }
+
+        .v span {
+            color: #666
+        }
+
+        @media(max-width:700px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+        <h1>Vancraeynest David - 5 layoutvoorstellen</h1>
+        <p>Open één van onderstaande varianten. Elke variant bevat Home, Aanleg, Projecten en Contact.</p>
+        <div class="grid"><a class="v" href="01-premium-craft/index.html"><b>01-premium-craft</b><span>Bekijk
+                    layout</span></a><a class="v"
+                href="02-modern-contractor/index.html"><b>02-modern-contractor</b><span>Bekijk layout</span></a><a
+                class="v" href="03-clean-local/index.html"><b>03-clean-local</b><span>Bekijk layout</span></a><a
+                class="v" href="04-project-gallery/index.html"><b>04-project-gallery</b><span>Bekijk layout</span></a>
+                <a class="v" href="05-onepage-sales/index.html"><b>05-onepage-sales</b><span>Bekijk layout</span></a>
+                <a class="v" href="06-construction/index.html"><b>06-construction</b><span>Bekijk layout</span></a>
+            </div>
+    </main>
+</body>
+
+</html>
