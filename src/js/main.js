@@ -7,16 +7,16 @@ $(document).ready(function () {
         return window.innerWidth <= 767;
     }
 
-    
+
     setTimeout(function () {
-        if(!isMobile()){
+        if (!isMobile()) {
             document.querySelector('.nav-trigger')?.click();
 
             navOpen = true;
         }
     }, 300);
 
-    
+
     $(window).on('scroll', function () {
         function isMobile() {
             return window.innerWidth <= 767;
@@ -31,10 +31,10 @@ $(document).ready(function () {
         if (!isMobile && scrollTop > 500 && navOpen) {
             document.querySelector('.nav-trigger')?.click();
 
-            navOpen = false; 
-        }else if(!isMobile && scrollTop < 500 && !navOpen){
+            navOpen = false;
+        } else if (!isMobile && scrollTop < 500 && !navOpen) {
             document.querySelector('.nav-trigger')?.click();
-            
+
             navOpen = true;
         }
     });
@@ -95,144 +95,143 @@ $(document).ready(function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-            const searchInput = document.getElementById("faqSearch");
-            const clearButton = document.getElementById("faqClear");
-            const faqItems = Array.from(document.querySelectorAll(".faq-item"));
-            const sections = Array.from(document.querySelectorAll(".faq-section"));
-            const noResults = document.getElementById("faqNoResults");
-            const countText = document.getElementById("faqCountText");
+    const searchInput = document.getElementById("faqSearch");
+    const clearButton = document.getElementById("faqClear");
+    const faqItems = Array.from(document.querySelectorAll(".faq-item"));
+    const sections = Array.from(document.querySelectorAll(".faq-section"));
+    const noResults = document.getElementById("faqNoResults");
+    const countText = document.getElementById("faqCountText");
 
-            if(searchInput == null){
-                return;
+    if (searchInput == null) {
+        return;
+    }
+
+    function normalize(text) {
+        return text
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function removeHighlights(container) {
+        container.querySelectorAll("mark").forEach(mark => {
+            const textNode = document.createTextNode(mark.textContent);
+            mark.replaceWith(textNode);
+        });
+        container.normalize();
+    }
+
+    function highlightText(container, searchTerm) {
+        if (!searchTerm || searchTerm.length < 2) return;
+
+        const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+            const node = walker.currentNode;
+            if (node.nodeValue.trim().length > 0) {
+                textNodes.push(node);
             }
+        }
 
-            function normalize(text) {
-                return text
-                    .toLowerCase()
-                    .normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "");
+        textNodes.forEach(node => {
+            const originalText = node.nodeValue;
+            const normalizedText = normalize(originalText);
+            const normalizedSearch = normalize(searchTerm);
+
+            const index = normalizedText.indexOf(normalizedSearch);
+            if (index === -1) return;
+
+            const range = document.createRange();
+            const start = index;
+            const end = index + searchTerm.length;
+
+            try {
+                range.setStart(node, start);
+                range.setEnd(node, Math.min(end, originalText.length));
+
+                const mark = document.createElement("mark");
+                range.surroundContents(mark);
+            } catch (e) {
+                // niets doen
             }
+        });
+    }
 
-            function escapeRegExp(string) {
-                return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-            }
+    function updateCount(visibleCount) {
+        if (visibleCount === 1) {
+            countText.innerHTML = "<strong>1</strong> vraag gevonden";
+        } else {
+            countText.innerHTML = `<strong>${visibleCount}</strong> vragen gevonden`;
+        }
+    }
 
-            function removeHighlights(container) {
-                container.querySelectorAll("mark").forEach(mark => {
-                    const textNode = document.createTextNode(mark.textContent);
-                    mark.replaceWith(textNode);
-                });
-                container.normalize();
-            }
+    function filterFaq() {
+        console.log('here');
+        const query = searchInput.value.trim();
+        const normalizedQuery = normalize(query);
+        let visibleCount = 0;
 
-            function highlightText(container, searchTerm) {
-                if (!searchTerm || searchTerm.length < 2) return;
+        faqItems.forEach(item => {
+            const answer = item.querySelector(".faq-answer");
+            const button = item.querySelector(".faq-question-btn");
+            const searchableText = normalize(item.innerText);
 
-                const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
-                const textNodes = [];
+            removeHighlights(item);
 
-                while (walker.nextNode()) {
-                    const node = walker.currentNode;
-                    if (node.nodeValue.trim().length > 0) {
-                        textNodes.push(node);
-                    }
+            const isMatch = normalizedQuery === "" || searchableText.includes(normalizedQuery);
+
+            if (isMatch) {
+                item.style.display = "";
+                visibleCount++;
+
+                if (normalizedQuery !== "") {
+                    item.classList.add("open");
+                    button.setAttribute("aria-expanded", "true");
+                    highlightText(item, query);
                 }
-
-                textNodes.forEach(node => {
-                    const originalText = node.nodeValue;
-                    const normalizedText = normalize(originalText);
-                    const normalizedSearch = normalize(searchTerm);
-
-                    const index = normalizedText.indexOf(normalizedSearch);
-                    if (index === -1) return;
-
-                    const range = document.createRange();
-                    const start = index;
-                    const end = index + searchTerm.length;
-
-                    try {
-                        range.setStart(node, start);
-                        range.setEnd(node, Math.min(end, originalText.length));
-
-                        const mark = document.createElement("mark");
-                        range.surroundContents(mark);
-                    } catch (e) {
-                        // niets doen
-                    }
-                });
+            } else {
+                item.style.display = "none";
+                item.classList.remove("open");
+                button.setAttribute("aria-expanded", "false");
             }
-
-            function updateCount(visibleCount) {
-                if (visibleCount === 1) {
-                    countText.innerHTML = "<strong>1</strong> vraag gevonden";
-                } else {
-                    countText.innerHTML = `<strong>${visibleCount}</strong> vragen gevonden`;
-                }
-            }
-
-            function filterFaq() {
-                console.log('here');
-                const query = searchInput.value.trim();
-                const normalizedQuery = normalize(query);
-                let visibleCount = 0;
-
-                faqItems.forEach(item => {
-                    const answer = item.querySelector(".faq-answer");
-                    const button = item.querySelector(".faq-question-btn");
-                    const searchableText = normalize(item.innerText);
-
-                    removeHighlights(item);
-
-                    const isMatch = normalizedQuery === "" || searchableText.includes(normalizedQuery);
-
-                    if (isMatch) {
-                        item.style.display = "";
-                        visibleCount++;
-
-                        if (normalizedQuery !== "") {
-                            item.classList.add("open");
-                            button.setAttribute("aria-expanded", "true");
-                            highlightText(item, query);
-                        }
-                    } else {
-                        item.style.display = "none";
-                        item.classList.remove("open");
-                        button.setAttribute("aria-expanded", "false");
-                    }
-                });
-
-                sections.forEach(section => {
-                    const visibleItems = Array.from(section.querySelectorAll(".faq-item"))
-                        .filter(item => item.style.display !== "none");
-
-                    section.style.display = visibleItems.length > 0 ? "" : "none";
-                });
-
-                noResults.style.display = visibleCount === 0 ? "block" : "none";
-                updateCount(visibleCount);
-            }
-
-            document.querySelectorAll(".faq-question-btn").forEach(button => {
-                button.addEventListener("click", function () {
-                    const item = this.closest(".faq-item");
-                    const isOpen = item.classList.contains("open");
-
-                    item.classList.toggle("open", !isOpen);
-                    this.setAttribute("aria-expanded", String(!isOpen));
-                });
-            });
-
-            searchInput.addEventListener("input", filterFaq);
-
-            clearButton.addEventListener("click", function () {
-                searchInput.value = "";
-                filterFaq();
-                searchInput.focus();
-            });
-
-            updateCount(faqItems.length);
         });
 
+        sections.forEach(section => {
+            const visibleItems = Array.from(section.querySelectorAll(".faq-item"))
+                .filter(item => item.style.display !== "none");
+
+            section.style.display = visibleItems.length > 0 ? "" : "none";
+        });
+
+        noResults.style.display = visibleCount === 0 ? "block" : "none";
+        updateCount(visibleCount);
+    }
+
+    document.querySelectorAll(".faq-question-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            const item = this.closest(".faq-item");
+            const isOpen = item.classList.contains("open");
+
+            item.classList.toggle("open", !isOpen);
+            this.setAttribute("aria-expanded", String(!isOpen));
+        });
+    });
+
+    searchInput.addEventListener("input", filterFaq);
+
+    clearButton.addEventListener("click", function () {
+        searchInput.value = "";
+        filterFaq();
+        searchInput.focus();
+    });
+
+    updateCount(faqItems.length);
+});
 
 
 
@@ -240,7 +239,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    // Mails
+
+// Mails
 const DOMAIN = 'amiros.be'; // Your Mailgun domain
 const API_KEY_Encrypted = 'U2FsdGVkX19RYrQK8TPuOzkolGrM9vqwyeRT6zLJZCvM4ZEH9OaEL7Np+Y05pXz9FYcdQaOkRsxGMIuPxnR0Il9gCdL+lSsdYqdDY+NgBus='; // Your Mailgun API key
 const secretKey = "ZW9sP241TtiqQwFC1RQj"; // Zorg dat je een sterke sleutel gebruikt!
@@ -262,78 +262,84 @@ $("#sendmail").click(function () {
     prepareMail(parent);
 });
 
-function prepareMail(parent){
+function prepareMail(parent) {
     var to = "ceschool@gmail.com";
-        var from = parent.find("#email").val();
-        var phoneNumber = parent.find("#phone").val();
-        var subject = parent.find("#subject").val();
-        var text = parent.find("#message").val();
-        var name = parent.find("#name").val();
+    var from = parent.find("#email").val();
+    var phoneNumber = parent.find("#phone").val();
+    var adres = parent.find("#adres").val();
+    var postalcode = parent.find("#postalcode").val();
+    var city = parent.find("#city").val();
+    var subject = parent.find("#subject").val();
+    var text = parent.find("#message").val();
+    var name = parent.find("#name").val();
 
-        var message = "From: " + from + "<br />" +
-            "Subject: " + subject + "<br />" +
-            "Phone: " + phoneNumber + "<br />" +
-            "Name: " + name + "<br />" +
-            "Text: " + text;
+    var message = "From: " + from + "<br />" +
+        "Subject: " + subject + "<br />" +
+        "Phone: " + phoneNumber + "<br />" +
+        "Name: " + name + "<br />" +
+        "Address: " + adres + "<br />" +
+        "Postal Code: " + postalcode + "<br />" +
+        "City: " + city + "<br />" +
+        "Text: " + text;
 
-        sendEmail(to, from, subject, message, true).then((sentMail) => {
-            if (sentMail) {
-                output = '<div class="alert-success" style="padding:10px 15px; margin-bottom:30px;">Mail werd verstuurd, we contacteren u zo snel mogelijk.</div>';
-                parent.find("#result").hide().html(output).slideDown();
-            
-    
-                parent.find(".contact_btn i").addClass('d-none');
-            }else{
-                output = '<div class="alert-danger" style="padding:10px 15px; margin-bottom:30px;">Er ging iets mis.</div>';
-                parent.find("#result").hide().html(output).slideDown();
-                
-                parent.find(".contact_btn i").addClass('d-none');
-            }
-          });
+    sendEmail(to, from, subject, message, true).then((sentMail) => {
+        if (sentMail) {
+            output = '<div class="alert-success" style="padding:10px 15px; margin-bottom:30px;">Mail werd verstuurd, we contacteren u zo snel mogelijk.</div>';
+            parent.find("#result").hide().html(output).slideDown();
+
+
+            parent.find(".contact_btn i").addClass('d-none');
+        } else {
+            output = '<div class="alert-danger" style="padding:10px 15px; margin-bottom:30px;">Er ging iets mis.</div>';
+            parent.find("#result").hide().html(output).slideDown();
+
+            parent.find(".contact_btn i").addClass('d-none');
+        }
+    });
 }
 
 
 async function sendEmail(to, from, subject, text, isHtml) {
-  const formData = new FormData();
-  formData.append('from', 'mailservice@amiros.be');
-  formData.append('to', 'ceschool@gmail.com');
-   formData.append('cc', 'info@computertje.be');
-  formData.append('subject', subject);
-  formData.append('text', text);
+    const formData = new FormData();
+    formData.append('from', 'mailservice@amiros.be');
+    formData.append('to', 'ceschool@gmail.com');
+    formData.append('cc', 'info@computertje.be');
+    formData.append('subject', subject);
+    formData.append('text', text);
 
-  if(isHtml){
-    formData.append('html', text);
-  }
-  
-  try {
-    var decryptedAPIKey = decryptString(API_KEY_Encrypted);
-
-    const response = await fetch(`https://api.eu.mailgun.net/v3/${DOMAIN}/messages`, {
-      method: 'POST',
-      headers: {
-        Authorization: `Basic ${btoa(`api:${decryptedAPIKey}`)}`
-      },
-      body: formData
-    });
-
-    if (!response.ok) {
-      const errorResponse = await response.json();
-      console.error('Error sending email:', errorResponse);
-      throw errorResponse;
+    if (isHtml) {
+        formData.append('html', text);
     }
 
-    const responseData = await response.json();
-    console.log('Email sent successfully:', responseData);
-    return true;
-  } catch (error) {
-    console.error('Error sending email:', error);
-    return false;
-  }
+    try {
+        var decryptedAPIKey = decryptString(API_KEY_Encrypted);
+
+        const response = await fetch(`https://api.eu.mailgun.net/v3/${DOMAIN}/messages`, {
+            method: 'POST',
+            headers: {
+                Authorization: `Basic ${btoa(`api:${decryptedAPIKey}`)}`
+            },
+            body: formData
+        });
+
+        if (!response.ok) {
+            const errorResponse = await response.json();
+            console.error('Error sending email:', errorResponse);
+            throw errorResponse;
+        }
+
+        const responseData = await response.json();
+        console.log('Email sent successfully:', responseData);
+        return true;
+    } catch (error) {
+        console.error('Error sending email:', error);
+        return false;
+    }
 }
 
 
 
-(function() {
+(function () {
     const banner = document.getElementById('cookie-banner');
     const acceptBtn = document.getElementById('cookie-accept');
     const declineBtn = document.getElementById('cookie-decline');
@@ -341,17 +347,22 @@ async function sendEmail(to, from, subject, text, isHtml) {
 
     // Toon banner alleen als nog geen keuze is gemaakt
     if (!localStorage.getItem(consentKey)) {
-      banner.style.display = 'block';
+        banner.style.display = 'block';
     }
 
-    acceptBtn.addEventListener('click', () => {
-      localStorage.setItem(consentKey, 'accepted');
-      banner.style.display = 'none';
-      // hier kun je extra scripts activeren (zoals analytics)
-    });
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem(consentKey, 'accepted');
+            banner.style.display = 'none';
+            // hier kun je extra scripts activeren (zoals analytics)
+        });
+    }
 
-    declineBtn.addEventListener('click', () => {
-      localStorage.setItem(consentKey, 'declined');
-      banner.style.display = 'none';
-    });
-  })();
+    if (declineBtn) {
+        declineBtn.addEventListener('click', () => {
+            localStorage.setItem(consentKey, 'declined');
+            banner.style.display = 'none';
+        });
+    }
+
+})();

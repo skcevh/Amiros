@@ -9,6 +9,9 @@ permalink: contact.html
 <head>
     <%- include('_includes/metas.ejs') %>
 
+    <%- include('_includes/googletags.ejs') %>
+
+
         <title>Amiros - Contact</title>
 
         <%- include('_includes/css.ejs') %>
@@ -39,7 +42,7 @@ Twijfel je? Dat is geen probleem.<br />
 
 
 
-    <div data-scroll-index="7" id="section-7" class="display-flex clearfix parallax-window">
+    <div dclass="display-flex clearfix parallax-window">
         <div class="container-wrap">
 
             <div class="display-flex no-padding contact-div wow fadeInUp" data-wow-delay=".3s">
@@ -60,6 +63,21 @@ Twijfel je? Dat is geen probleem.<br />
                                 <div class="mat-div">
                                     <label for="email" class="mat-label">E-mail</label>
                                     <input type="email" name="email" class="mat-input" id="email">
+                                </div>
+
+                                <div class="mat-div">
+                                    <label for="adres" class="mat-label">Adres</label>
+                                    <input type="text" name="adres" class="mat-input" id="adres">
+                                </div>
+
+                                <div class="mat-div">
+                                    <label for="postalcode" class="mat-label">Postcode</label>
+                                    <input type="text" name="postalcode" class="mat-input" id="postalcode">
+                                </div>
+
+                                <div class="mat-div">
+                                    <label for="city" class="mat-label">Stad</label>
+                                    <input type="text" name="city" class="mat-input" id="city">
                                 </div>
 
                                 <div class="mat-div">

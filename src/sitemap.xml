@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.amiros.be/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/diensten.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/website-maken.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/software.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/digitale-partner.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/branding.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/paketten.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/over-ons.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/FAQ.html</loc>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/contact.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/privacyverklaring.html</loc>
+    <priority>0.20</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/cookiebeleid.html</loc>
+    <priority>0.20</priority>
+  </url>
+
+  <url>
+    <loc>https://www.amiros.be/algemene-voorwaarden.html</loc>
+    <priority>0.20</priority>
+  </url>
+
+</urlset>

@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/Videos");
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/ionicons");
+  eleventyConfig.addPassthroughCopy("src/sitemap.xml");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   return {
     dir: {
